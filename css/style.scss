@@ -1,0 +1,244 @@
+@import "./normalize.scss";
+@import "./variables.scss";
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.progressbar {
+  background-color: $pink;
+  width: 100vw;
+  height: 7px;
+}
+
+.container {
+  width: 85vw;
+  margin: 5rem auto;
+  p {
+    margin: 4rem 0 0 0;
+    width: 85%;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  .title {
+    width: 350px;
+    h1 {
+      margin: 0;
+      color: $black;
+      font-size: 4rem;
+      line-height: 0.95;
+    }
+  }
+  .languages {
+    display: flex;
+    flex-direction: column;
+    padding: 7px;
+    border-radius: 50px;
+    background-color: $lightgray;
+    .flag {
+      width: 40px;
+      margin: 6px 0;
+    }
+  }
+}
+
+.first-carousel {
+  margin: 4rem 0 2rem 0;
+  display: flex;
+  height: 400px;
+  justify-content: space-between;
+  .first-stamp {
+    z-index: 10;
+    position: absolute;
+    right: 320px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: $pink;
+    animation: rotate 5s infinite linear;
+  }
+  .pics {
+    img {
+      position: absolute;
+      right: 20px;
+      width: 300px;
+    }
+  }
+}
+
+.purple-before,
+.pink-before {
+  margin: 0 0 -1rem 0;
+  width: 100vw;
+  
+}
+
+.purple-after,
+.pink-after {
+  margin: -1px 0 -0 0;
+  width: 100vw;
+}
+
+.purple-section {
+  background-image: url("../images/bone.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: $purple;
+  padding: 1rem 0;
+  .container {
+    width: 70vw;
+    margin: 3rem 10vw;
+    color: $white;
+    font-size: 1.9rem;
+    font-weight: 400;
+    span {
+      color: $pink;
+    }
+  }
+}
+
+.second-carousel {
+  margin: 4rem 0 2rem 0;
+  height: 400px;
+  .second-stamp {
+    z-index: 10;
+    position: absolute;
+    left: 300px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: $pink;
+    animation: rotate 5s infinite linear;
+  }
+  .pics {
+    img {
+      position: absolute;
+      left: 40px;
+      width: 300px;
+    }
+  }
+}
+
+.container-numbers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 85vw;
+  margin: 5rem auto;
+  background-color: $white;
+  border-radius: 30px;
+  padding: 2rem 0;
+  p {
+    width: 95%;
+    span {
+      font-style: italic;
+      text-decoration: underline dotted $purple;
+    }
+  }
+  .icon {
+    text-align: center;
+  }
+  h2 {
+    margin: 0;
+    font-size: 2.1rem;
+    color: $purple;
+    font-weight: 500;
+    text-align: center;
+  }
+  .pin {
+    font-size: 0.7rem;
+    text-align: center;
+    color: $purple;
+    padding: 0 8px 0 0;
+  }
+  .data {
+    width: 80%;
+    margin: 1.5rem 0;
+    // background-color: red;
+  }
+}
+
+.pink-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../images/paw.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: $pink;
+  padding: 1rem 0;
+  .container {
+    width: 70vw;
+    margin: 4rem 10vw;
+    color: $white;
+    font-size: 1.9rem;
+    font-weight: 400;
+    span {
+      color: $purple;
+    }
+  }
+  button {
+    color: $white;
+    width: 320px;
+    font-size: 1.9rem;
+    background-color: $purple;
+    padding: 2rem 0rem;
+    margin: 0 0 2rem 0;
+    border-radius: 60px;
+    border: 0;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px $purple;
+  }
+  .bank {
+    display: flex;
+    color: $white;
+    font-size: 0.75rem;
+    line-height: 1.7;
+    margin: 0 0 2rem 0;
+    .labels {
+      font-weight: 600;
+    }
+    .break {
+      width: 10px;
+    }
+  }
+}
+
+.container {
+  .title {
+    h1 {
+      margin: 0 0 4rem 0;
+      color: $black;
+      font-size: 4rem;
+      line-height: 0.95;
+    }
+  }
+  .faq {
+    .question {
+      color: $purple;
+      margin: 15px 0;
+    }
+    .line {
+      border-bottom: 1px solid #dde0ff;
+    }
+  }
+}
+
+.footer {
+  text-align: center;
+  font-size: 10px;
+  color: $pink;
+  margin: 0 0 5rem 0;
+  p {
+    margin: 3px;
+    img {
+      width: 10px;
+    }
+  }
+}
