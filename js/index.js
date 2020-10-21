@@ -1,3 +1,6 @@
+import { CountUp } from './countUp.js'
+
+
 const firstStamp = new CircleType(document.querySelector(".first-stamp"));
 firstStamp.radius(1);
 
@@ -64,10 +67,10 @@ secondPics.addEventListener("click", () => {
 const bankDeets = document.querySelector(".bank");
 const infos = document.querySelector(".infos");
 const tooltip = document.querySelector(".tooltip");
+const taptocopy = document.querySelector(".taptocopy");
 
 
-bankDeets.addEventListener("click", () => {
-
+const copy = () => {
     const range = document.createRange();
     range.selectNode(infos);
     window.getSelection().removeAllRanges(); // clear current selection
@@ -78,14 +81,36 @@ bankDeets.addEventListener("click", () => {
     tooltip.style.animation = "copy 1s ease"
 
     setTimeout(function(){ tooltip.style.animation = "" }, 1000);
+}
 
-  console.log("test")
+bankDeets.addEventListener("click", () => {
+    copy();
+});
+
+taptocopy.addEventListener("click", () => {
+    copy();
 });
 
 
+const options = {
+      decimalPlaces: 2,
+      duration: 2,
+      separator: '.',
+      decimal: ',',
+    };
+    let firstnr = new CountUp('firstnumber', 2255.17, options);
+    let secondnr = new CountUp('secondnumber', 1500.00, options);
+    let thirdnr = new CountUp('thirdnumber', 4000.00, options);
+    let fourthnr = new CountUp('fourthnumber', 1800.00, options);
 
-const copytext = () => {
-   
-}
+    firstnr.start();
+    secondnr.start();
+    thirdnr.start();
+    fourthnr.start();
+
+
 
 console.log("🐶 🐶 🐶 SAVE BUDDY 🐶 🐶 🐶 hehe.");
+
+
+

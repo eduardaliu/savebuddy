@@ -334,6 +334,14 @@ body {
     opacity: 0;
     transform: translateY(-5px); } }
 
+@keyframes scale {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.02); }
+  100% {
+    transform: scale(1); } }
+
 .progressbar {
   position: fixed;
   z-index: 999;
@@ -356,7 +364,7 @@ body {
   justify-content: space-between;
   align-items: flex-start; }
   .header .title {
-    width: 350px; }
+    width: 300px; }
     .header .title h1 {
       margin: 0;
       color: #37475a;
@@ -504,18 +512,25 @@ body {
     font-size: 1.9rem;
     background-color: #4959df;
     padding: 2rem 0rem;
-    margin: 0 0 1rem 0;
+    margin: 0;
     border-radius: 60px;
     border: 0;
     cursor: pointer;
-    box-shadow: 0px 0px 10px #4959df; }
+    box-shadow: 0px 0px 10px #4959df;
+    animation: scale 2s infinite cubic-bezier(0.39, 0.575, 0.565, 1) both; }
+  .pink-section .taptocopy {
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 0.75rem;
+    line-height: 1.7;
+    margin: 0 0 10px 0; }
   .pink-section .bank {
     display: flex;
     cursor: pointer;
     color: #ffffff;
     font-size: 0.75rem;
     line-height: 1.7;
-    margin: 0 0 2rem 0; }
+    margin: 0 0 3rem 0; }
     .pink-section .bank .labels {
       font-weight: 600; }
     .pink-section .bank .break {
