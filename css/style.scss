@@ -53,6 +53,46 @@
 //   height: 100vh;
 // }
 
+// .banner-addition-bg {
+//     background: $blue;
+//     position: absolute;
+//     left: 0;
+//     right: 0;
+//     top: 0;
+//     bottom: 0;
+//     height: 100%;
+//   }
+//   .banner-bg {
+//     background: $lPink;
+//     position: absolute;
+//     left: 0;
+//     right: 0;
+//     top: 0;
+//     bottom: 0;
+//     height: 100%;
+//   }
+
+.revealpink,
+.revealpurple,
+.revealwhite {
+  z-index: 1000;
+  background: $pink;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+.revealpurple {
+  background: $purple;
+}
+
+.revealwhite {
+  background: $lightpurple;
+}
+
 .progressbar {
   position: fixed;
   z-index: 999;
@@ -314,6 +354,15 @@
   @media ($break-desktop) {
     max-width: 600px;
     margin-top: 11rem;
+  }
+  @media ($break-wide) {
+    max-width: 900px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .data {
+      flex: 0 50%;
+    }
   }
 }
 

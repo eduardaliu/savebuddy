@@ -67,7 +67,7 @@ firstPics.addEventListener("mouseover", () => {
   firstImgs.forEach((image) => {
     const x = 25 * Math.floor(Math.random() * 5) - 50;
     const y = 25 * Math.floor(Math.random() * 5) - 50;
-    image.style.transform = `translate(${x/3}px, ${y/3}px)`;
+    image.style.transform = `translate(${x / 3}px, ${y / 3}px)`;
   });
 });
 
@@ -85,12 +85,12 @@ secondPics.addEventListener("mouseover", () => {
   secondImgs.forEach((image) => {
     const x = 25 * Math.floor(Math.random() * 5) - 50;
     const y = 25 * Math.floor(Math.random() * 5) - 50;
-    image.style.transform = `translate(${x/3}px, ${y/3}px)`;
+    image.style.transform = `translate(${x / 3}px, ${y / 3}px)`;
   });
 });
 
 secondPics.addEventListener("mouseout", () => {
-    secondImgs.forEach((image) => {
+  secondImgs.forEach((image) => {
     const integer = Math.round(Math.random()) * 2 - 1;
     const degrees = Math.floor(Math.random() * 10 - 3);
     image.style.transform = `translate(0px, 0px) rotate(${
@@ -141,3 +141,43 @@ thirdnr.start();
 fourthnr.start();
 
 console.log("🐶 🐶 🐶 SAVE BUDDY 🐶 🐶 🐶 hehe.");
+
+const revealpink = document.querySelector(".revealpink");
+const revealpurple = document.querySelector(".revealpurple");
+const revealwhite = document.querySelector(".revealwhite");
+
+const title = document.querySelector(".title");
+
+gsap.from(title, {
+  delay: -0.2,
+  y: 25,
+  opacity: 0,
+  duration: 0.8,
+  ease: "power3.inOut",
+});
+
+const firstTL = gsap.timeline();
+
+if (window.pageYOffset !== 0) {
+    revealpink.style.width = 0;
+    revealpurple.style.width = 0;
+
+    console.log('test')
+}
+
+firstTL
+  .to([revealpink, revealpurple], {
+    duration: 1.2,
+    width: 0,
+    // skewX: 4,
+    ease: "power3.inOut",
+    stagger: {
+      amount: 0.2,
+    },
+  })
+  .add(function () {
+    document.querySelector("body").classList.remove("no-scroll");
+  });
+
+// const banner = document.querySelector("#bannerBg");
+// const bannerAddition = document.querySelector("#bannerBgAddition");

@@ -309,6 +309,8 @@ body {
   font-size: 16px;
   color: #37475a;
   line-height: 1.4; }
+  body.no-scroll {
+    overflow-y: hidden; }
 
 @keyframes rotate {
   100% {
@@ -341,6 +343,25 @@ body {
     transform: scale(1.02); }
   100% {
     transform: scale(1); } }
+
+.revealpink,
+.revealpurple,
+.revealwhite {
+  z-index: 1000;
+  background: #fe9f99;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%; }
+
+.revealpurple {
+  background: #4959df; }
+
+.revealwhite {
+  background: #f8f9fe; }
 
 .progressbar {
   position: fixed;
@@ -554,6 +575,14 @@ body {
     .container-numbers {
       max-width: 600px;
       margin-top: 11rem; } }
+  @media (min-width: 1220px) {
+    .container-numbers {
+      max-width: 900px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap; }
+      .container-numbers .data {
+        flex: 0 50%; } }
 
 .pink-section {
   display: flex;
