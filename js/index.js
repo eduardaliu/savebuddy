@@ -6,17 +6,16 @@ const firstStamp = new CircleType(document.querySelector(".first-stamp"));
 const secondStamp = new CircleType(document.querySelector(".second-stamp"));
 // secondStamp.radius(1);
 
-
 const tappable = document.querySelector(".tappable");
 const bankDeets = document.querySelector(".bank");
 const infos = document.querySelector(".infos");
 const tooltip = document.querySelector(".tooltip");
 const taptocopy = document.querySelector(".taptocopy");
 
-const button = document.querySelector(".button")
+const button = document.querySelector(".button");
 if (document.defaultView.innerWidth < 480) {
-    button.innerHTML = "Tap to Donate 🐶"
-    taptocopy.innerHTML = "Or tap to copy our bank details:"
+  button.innerHTML = "Tap to Donate 🐶";
+  taptocopy.innerHTML = "Or tap to copy our bank details:";
 }
 
 const progressBar = document.querySelector(".progressbar");
@@ -112,7 +111,6 @@ secondPics.addEventListener("mouseout", () => {
   });
 });
 
-
 const copy = () => {
   const range = document.createRange();
   range.selectNode(infos);
@@ -134,7 +132,7 @@ tappable.addEventListener("click", () => {
 
 const options = {
   decimalPlaces: 2,
-  duration: 2,
+  duration: 1.5,
   separator: ".",
   decimal: ",",
 };
@@ -143,11 +141,6 @@ let secondnr = new CountUp("secondnumber", 1500.0, options);
 let thirdnr = new CountUp("thirdnumber", 4000.0, options);
 let fourthnr = new CountUp("fourthnumber", 1800.0, options);
 
-firstnr.start();
-secondnr.start();
-thirdnr.start();
-fourthnr.start();
-
 console.log("🐶 🐶 🐶 SAVE BUDDY 🐶 🐶 🐶 hehe.");
 
 const revealpink = document.querySelector(".revealpink");
@@ -155,22 +148,21 @@ const revealpurple = document.querySelector(".revealpurple");
 const revealwhite = document.querySelector(".revealwhite");
 
 const title = document.querySelector(".title");
-
-gsap.from(title, {
-  delay: -0.2,
-  y: 25,
-  opacity: 0,
-  duration: 0.8,
-  ease: "power3.inOut",
-});
+const intro = document.querySelectorAll("div.firstcontainer > p");
+const firststamp = document.querySelector(".first-stamp");
+const firstpics = document.querySelector(".first-pics");
+const languages = document.querySelector(".languages");
+const purpletext = document.querySelectorAll("div.purple-section > .container");
+const pinktext = document.querySelectorAll("div.pink-section > .container");
+const bank = document.querySelectorAll("div.pink-section > span");
 
 const firstTL = gsap.timeline();
+const secondTL = gsap.timeline();
+const thirdTL = gsap.timeline();
 
 if (window.pageYOffset !== 0) {
-    revealpink.style.width = 0;
-    revealpurple.style.width = 0;
-
-    console.log('test')
+  revealpink.style.width = 0;
+  revealpurple.style.width = 0;
 }
 
 firstTL
@@ -185,7 +177,109 @@ firstTL
   })
   .add(function () {
     document.querySelector("body").classList.remove("no-scroll");
+  })
+  .from(title, {
+    delay: -0.5,
+    y: 25,
+    opacity: 0,
+    duration: 0.6,
+    ease: "power3.inOut",
+  })
+  .from(languages, {
+    delay: -0.3,
+    y: 25,
+    opacity: 0,
+    duration: 0.6,
+    ease: "power3.inOut",
+  })
+  .from(intro, {
+    delay: -0.5,
+    y: 25,
+    opacity: 0,
+    duration: 0.6,
+    ease: "power3.inOut",
+  })
+  .from(firststamp, {
+    delay: -0.5,
+    x: -25,
+    opacity: 0,
+    duration: 0.6,
+    ease: "power3.inOut",
+  })
+  .from(firstpics, {
+    delay: -0.5,
+    opacity: 0,
+    duration: 0.6,
+    ease: "power3.inOut",
   });
+
+secondTL.from(purpletext, {
+  delay: -0.5,
+  y: 225,
+  opacity: 0,
+  duration: 2.6,
+  ease: "power3.inOut",
+});
+
+thirdTL
+  .from(pinktext, {
+    delay: -0.5,
+    y: 220,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.inOut",
+  })
+  .from(button, {
+    delay: -0.5,
+    x: 2220,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.inOut",
+  })
+  .from(bank, {
+    delay: -0.5,
+    y: 20,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.inOut",
+  });
+
+const controller = new ScrollMagic.Controller();
+const scene = new ScrollMagic.Scene({
+  triggerElement: "#firsttrigger",
+  triggerHook: 0,
+  reverse: false,
+})
+  .addIndicators()
+  .setTween(secondTL)
+  .addTo(controller);
+
+var secscene = new ScrollMagic.Scene({
+  triggerElement: "#secondtrigger",
+})
+  .on("start", function () {
+    firstnr.start();
+    setTimeout(function () {
+      secondnr.start();
+    }, 200);
+    setTimeout(function () {
+      thirdnr.start();
+    }, 400);
+    setTimeout(function () {
+      fourthnr.start();
+    }, 600);
+  })
+  .addIndicators()
+  .addTo(controller);
+
+  const thiscene = new ScrollMagic.Scene({
+    triggerElement: "#thirdtrigger",
+    triggerHook: 0,
+    reverse: false,
+  })
+    .addIndicators()
+    .setTween(thirdTL)
+    .addTo(controller);
 
 // const banner = document.querySelector("#bannerBg");
 // const bannerAddition = document.querySelector("#bannerBgAddition");

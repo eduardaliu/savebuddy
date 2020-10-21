@@ -379,7 +379,7 @@ body {
   .container p {
     margin: 4rem 0 0 0;
     width: 85%; }
-  @media (min-width: 768px) {
+  @media (min-width: 868px) {
     .container .firstcontainer {
       max-width: 800px;
       margin: auto; }
@@ -398,7 +398,7 @@ body {
       color: #37475a;
       font-size: 4rem;
       line-height: 0.95; }
-    @media (min-width: 768px) {
+    @media (min-width: 868px) {
       .header .title {
         width: 400px; }
         .header .title h1 {
@@ -446,7 +446,7 @@ body {
     font-weight: 600;
     color: #fe9f99;
     animation: rotate 5s infinite linear; }
-    @media (min-width: 768px) {
+    @media (min-width: 868px) {
       .first-carousel .first-stamp {
         right: 20%;
         font-size: 1.5rem; } }
@@ -464,7 +464,7 @@ body {
     @media (min-width: 480px) {
       .first-carousel .first-pics img {
         width: 310px; } }
-    @media (min-width: 768px) {
+    @media (min-width: 868px) {
       .first-carousel .first-pics img {
         margin-top: -6rem;
         width: 400px; } }
@@ -494,7 +494,7 @@ body {
     font-weight: 400; }
     .purple-section .container span {
       color: #fe9f99; }
-    @media (min-width: 768px) {
+    @media (min-width: 868px) {
       .purple-section .container {
         max-width: 700px; } }
 
@@ -525,7 +525,7 @@ body {
     @media (min-width: 480px) {
       .second-carousel .second-pics img {
         width: 310px; } }
-  @media (min-width: 768px) {
+  @media (min-width: 868px) {
     .second-carousel {
       max-width: 600px;
       margin: 5rem auto; }
@@ -571,7 +571,7 @@ body {
   .container-numbers .data {
     width: 80%;
     margin: 1.5rem 0; }
-  @media (min-width: 768px) {
+  @media (min-width: 868px) {
     .container-numbers {
       max-width: 600px;
       margin-top: 11rem; } }
@@ -602,7 +602,7 @@ body {
     font-weight: 400; }
     .pink-section .container span {
       color: #4959df; }
-    @media (min-width: 768px) {
+    @media (min-width: 868px) {
       .pink-section .container {
         max-width: 700px; } }
   .pink-section button {
@@ -646,7 +646,7 @@ body {
     color: #37475a;
     font-size: 4rem;
     line-height: 0.95; }
-    @media (min-width: 768px) {
+    @media (min-width: 868px) {
       .containerfaq .title h1 {
         font-size: 5rem; } }
   .containerfaq .faq {
@@ -658,7 +658,7 @@ body {
       margin: 0 0 2rem 0; }
     .containerfaq .faq .line {
       border-bottom: 1px solid #dde0ff; }
-    @media (min-width: 768px) {
+    @media (min-width: 868px) {
       .containerfaq .faq {
         max-width: 500px;
         margin: 5rem auto; } }
