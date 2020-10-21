@@ -358,6 +358,10 @@ body {
   .container p {
     margin: 4rem 0 0 0;
     width: 85%; }
+    @media (min-width: 768px) {
+      .container p {
+        width: 260px;
+        margin: -4rem 0 0 0; } }
 
 .header {
   display: flex;
@@ -370,6 +374,11 @@ body {
       color: #37475a;
       font-size: 4rem;
       line-height: 0.95; }
+    @media (min-width: 768px) {
+      .header .title {
+        width: 400px; }
+        .header .title h1 {
+          font-size: 5rem; } }
   .header .languages {
     display: flex;
     flex-direction: column;
@@ -379,6 +388,11 @@ body {
     .header .languages .flag {
       width: 30px;
       margin: 5px 0; }
+    @media (min-width: 480px) {
+      .header .languages {
+        flex-direction: row; }
+        .header .languages .flag {
+          margin: 5px 5px; } }
 
 .first-carousel {
   position: relative;
@@ -394,6 +408,9 @@ body {
     font-weight: 600;
     color: #fe9f99;
     animation: rotate 5s infinite linear; }
+    @media (min-width: 768px) {
+      .first-carousel .first-stamp {
+        right: 20%; } }
   .first-carousel .first-pics img {
     border-radius: 30px;
     position: absolute;
@@ -405,6 +422,13 @@ body {
       transform: rotate(5deg); }
     .first-carousel .first-pics img:nth-child(2) {
       transform: rotate(-2deg); }
+    @media (min-width: 480px) {
+      .first-carousel .first-pics img {
+        width: 310px; } }
+    @media (min-width: 768px) {
+      .first-carousel .first-pics img {
+        margin-top: -6rem;
+        width: 400px; } }
 
 .purple-before,
 .pink-before {
@@ -413,7 +437,7 @@ body {
 
 .purple-after,
 .pink-after {
-  margin: -1px 0 -0 0;
+  margin: -3px 0 -0 0;
   width: 100vw; }
 
 .purple-section {
@@ -443,6 +467,9 @@ body {
     font-weight: 600;
     color: #fe9f99;
     animation: rotatereverse 5s infinite linear; }
+    @media (min-width: 768px) {
+      .second-carousel .second-stamp {
+        right: 20%; } }
   .second-carousel .second-pics img {
     border-radius: 30px;
     position: absolute;
@@ -454,6 +481,13 @@ body {
       transform: rotate(5deg); }
     .second-carousel .second-pics img:nth-child(2) {
       transform: rotate(-2deg); }
+    @media (min-width: 480px) {
+      .second-carousel .second-pics img {
+        width: 310px; } }
+    @media (min-width: 768px) {
+      .second-carousel .second-pics img {
+        margin: -1rem 30vw;
+        width: 350px; } }
 
 .container-numbers {
   display: flex;
@@ -471,6 +505,10 @@ body {
     .container-numbers p span {
       font-style: italic;
       text-decoration: underline dotted #4959df; }
+    @media (min-width: 480px) {
+      .container-numbers p {
+        margin: 1rem auto;
+        max-width: 350px; } }
   .container-numbers .icon {
     text-align: center; }
   .container-numbers h2 {
@@ -487,6 +525,10 @@ body {
   .container-numbers .data {
     width: 80%;
     margin: 1.5rem 0; }
+  @media (min-width: 768px) {
+    .container-numbers {
+      max-width: 600px;
+      margin-top: 7rem; } }
 
 .pink-section {
   display: flex;
@@ -536,21 +578,27 @@ body {
     .pink-section .bank .break {
       width: 10px; }
 
-.container .title h1 {
-  margin: 0;
-  color: #37475a;
-  font-size: 4rem;
-  line-height: 0.95; }
-
-.container .faq {
-  margin: 3rem 0 0 0; }
-  .container .faq .question {
-    color: #4959df;
-    margin: 15px 0; }
-  .container .faq .answer {
-    margin: 0 0 2rem 0; }
-  .container .faq .line {
-    border-bottom: 1px solid #dde0ff; }
+.containerfaq {
+  width: 85vw;
+  margin: 5rem auto 2rem auto; }
+  .containerfaq .title h1 {
+    margin: 0;
+    color: #37475a;
+    font-size: 4rem;
+    line-height: 0.95; }
+  .containerfaq .faq {
+    margin: 3rem 0 0 0; }
+    .containerfaq .faq .question {
+      color: #4959df;
+      margin: 15px 0; }
+    .containerfaq .faq .answer {
+      margin: 0 0 2rem 0; }
+    .containerfaq .faq .line {
+      border-bottom: 1px solid #dde0ff; }
+    @media (min-width: 768px) {
+      .containerfaq .faq {
+        max-width: 500px;
+        margin: 5rem auto; } }
 
 .footer {
   text-align: center;

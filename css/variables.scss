@@ -1,6 +1,11 @@
-$break-mobile: "screen and (max-width: 479px)";
-$break-tablet: "screen and (max-width: 767px)";
+// $break-mobile: "screen and (max-width: 479px)";
+// $break-tablet: "screen and (max-width: 767px)";
+// $break-desktop: "min-width: 768px";
+
+
+$break-tablet: "min-width: 480px";
 $break-desktop: "min-width: 768px";
+
 
 // color
 $purple: #4959df;

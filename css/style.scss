@@ -65,6 +65,10 @@
   p {
     margin: 4rem 0 0 0;
     width: 85%;
+    @media ($break-desktop) {
+      width: 260px;
+      margin: -4rem 0 0 0;
+    }
   }
 }
 
@@ -80,6 +84,12 @@
       font-size: 4rem;
       line-height: 0.95;
     }
+    @media ($break-desktop) {
+      width: 400px;
+      h1 {
+        font-size: 5rem;
+      }
+    }
   }
   .languages {
     display: flex;
@@ -90,6 +100,12 @@
     .flag {
       width: 30px;
       margin: 5px 0;
+    }
+    @media ($break-tablet) {
+      flex-direction: row;
+      .flag {
+        margin: 5px 5px;
+      }
     }
   }
 }
@@ -108,6 +124,9 @@
     font-weight: 600;
     color: $pink;
     animation: rotate 5s infinite linear;
+    @media ($break-desktop) {
+      right: 20%;
+    }
   }
   .first-pics {
     img {
@@ -123,6 +142,13 @@
       &:nth-child(2) {
         transform: rotate(-2deg);
       }
+      @media ($break-tablet) {
+        width: 310px;
+      }
+      @media ($break-desktop) {
+        margin-top: -6rem;
+        width: 400px;
+      }
     }
   }
 }
@@ -135,7 +161,7 @@
 
 .purple-after,
 .pink-after {
-  margin: -1px 0 -0 0;
+  margin: -3px 0 -0 0;
   width: 100vw;
 }
 
@@ -170,6 +196,9 @@
     font-weight: 600;
     color: $pink;
     animation: rotatereverse 5s infinite linear;
+    @media ($break-desktop) {
+        right: 20%;
+      }
   }
   .second-pics {
     img {
@@ -184,6 +213,13 @@
       }
       &:nth-child(2) {
         transform: rotate(-2deg);
+      }
+      @media ($break-tablet) {
+        width: 310px;
+      }
+      @media ($break-desktop) {
+        margin: -1rem 30vw;
+        width: 350px;
       }
     }
   }
@@ -207,6 +243,10 @@
       font-style: italic;
       text-decoration: underline dotted $purple;
     }
+    @media ($break-tablet) {
+      margin: 1rem auto;
+      max-width: 350px;
+    }
   }
   .icon {
     text-align: center;
@@ -228,6 +268,10 @@
     width: 80%;
     margin: 1.5rem 0;
     // background-color: red;
+  }
+  @media ($break-desktop) {
+    max-width: 600px;
+    margin-top: 7rem;
   }
 }
 
@@ -288,7 +332,9 @@
   }
 }
 
-.container {
+.containerfaq {
+  width: 85vw;
+  margin: 5rem auto 2rem auto;
   .title {
     h1 {
       margin: 0;
@@ -308,6 +354,10 @@
     }
     .line {
       border-bottom: 1px solid #dde0ff;
+    }
+    @media ($break-desktop) {
+      max-width: 500px;
+      margin: 5rem auto;
     }
   }
 }
