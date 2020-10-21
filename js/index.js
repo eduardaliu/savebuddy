@@ -64,6 +64,7 @@ secondPics.addEventListener("click", () => {
   secondImgs[current].style.animation = "fade 0.2s ease";
 });
 
+const tappable = document.querySelector(".tappable")
 const bankDeets = document.querySelector(".bank");
 const infos = document.querySelector(".infos");
 const tooltip = document.querySelector(".tooltip");
@@ -83,13 +84,10 @@ const copy = () => {
     setTimeout(function(){ tooltip.style.animation = "" }, 1000);
 }
 
-bankDeets.addEventListener("click", () => {
+tappable.addEventListener("click", () => {
     copy();
 });
 
-taptocopy.addEventListener("click", () => {
-    copy();
-});
 
 
 const options = {

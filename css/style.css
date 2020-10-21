@@ -573,7 +573,7 @@ body {
   .tooltip:after {
     content: "";
     position: absolute;
-    margin-top: 20px;
+    margin-top: 18px;
     margin-left: -30px;
     border-width: 8px;
     border-style: solid;

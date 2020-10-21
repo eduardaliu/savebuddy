@@ -23,28 +23,30 @@
 }
 
 @keyframes copy {
-    0% {
-      opacity: 0;
-      transform: translateY(10px)
-    }
-    50% {
-      opacity: 1;
-    }
-    100% {
-        opacity: 0;
-        transform: translateY(-5px);
-      }
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
   }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+}
 
-  @keyframes scale {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.02);    }
-    100% {
-        transform: scale(1);      }
+@keyframes scale {
+  0% {
+    transform: scale(1);
   }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 
 .progressbar {
   position: fixed;
@@ -200,7 +202,6 @@
   box-shadow: 0px 0px 30px #e4e7ff;
 
   p {
-      
     width: 95%;
     span {
       font-style: italic;
@@ -261,8 +262,7 @@
     border: 0;
     cursor: pointer;
     box-shadow: 0px 0px 10px $purple;
-    animation: scale 2s infinite cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-
+    animation: scale 2s infinite cubic-bezier(0.39, 0.575, 0.565, 1) both;
   }
   .taptocopy {
     cursor: pointer;
@@ -325,24 +325,21 @@
   }
 }
 
-
-
 .tooltip {
-    opacity: 0;
-    color: $purple;
-    background-color: $lightpurple;
-    padding: 5px;
-    margin: 0 0 10px 0;
-    border-radius: 15px;
-    font-size: 0.8rem;
-    &:after {
-                content: "";
-                position: absolute;
-                margin-top: 20px;
-                margin-left: -30px;
-                border-width: 8px;
-                border-style: solid;
-                border-color: $lightpurple transparent transparent transparent;
-              }
+  opacity: 0;
+  color: $purple;
+  background-color: $lightpurple;
+  padding: 5px;
+  margin: 0 0 10px 0;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  &:after {
+    content: "";
+    position: absolute;
+    margin-top: 18px;
+    margin-left: -30px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: $lightpurple transparent transparent transparent;
   }
-  
+}
