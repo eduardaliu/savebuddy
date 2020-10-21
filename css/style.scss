@@ -7,6 +7,21 @@
   }
 }
 
+@keyframes rotatereverse {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .progressbar {
   background-color: $pink;
   width: 100vw;
@@ -15,7 +30,7 @@
 
 .container {
   width: 85vw;
-  margin: 5rem auto;
+  margin: 5rem auto 2rem auto;
   p {
     margin: 4rem 0 0 0;
     width: 85%;
@@ -49,24 +64,33 @@
 }
 
 .first-carousel {
-  margin: 4rem 0 2rem 0;
+  position: relative;
+  margin: 4rem 0 0 0;
   display: flex;
   height: 400px;
   justify-content: space-between;
   .first-stamp {
-    z-index: 10;
+    z-index: 999;
     position: absolute;
-    right: 320px;
+    left: 10%;
     text-transform: uppercase;
     font-weight: 600;
     color: $pink;
     animation: rotate 5s infinite linear;
   }
-  .pics {
+  .first-pics {
     img {
+      border-radius: 30px;
       position: absolute;
       right: 20px;
-      width: 300px;
+      width: 280px;
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+      &:nth-child(1) {
+        transform: rotate(5deg);
+      }
+      &:nth-child(2) {
+        transform: rotate(-2deg);
+      }
     }
   }
 }
@@ -75,7 +99,6 @@
 .pink-before {
   margin: 0 0 -1rem 0;
   width: 100vw;
-  
 }
 
 .purple-after,
@@ -103,22 +126,32 @@
 }
 
 .second-carousel {
+  position: relative;
   margin: 4rem 0 2rem 0;
   height: 400px;
+//   background-color: red;
   .second-stamp {
-    z-index: 10;
+    z-index: 999;
     position: absolute;
-    left: 300px;
+    right: 20%;
     text-transform: uppercase;
     font-weight: 600;
     color: $pink;
-    animation: rotate 5s infinite linear;
+    animation: rotatereverse 5s infinite linear;
   }
-  .pics {
+  .second-pics {
     img {
+      border-radius: 30px;
       position: absolute;
-      left: 40px;
-      width: 300px;
+      left: 50px;
+      width: 280px;
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+      &:nth-child(1) {
+        transform: rotate(5deg);
+      }
+      &:nth-child(2) {
+        transform: rotate(-2deg);
+      }
     }
   }
 }
@@ -133,6 +166,8 @@
   background-color: $white;
   border-radius: 30px;
   padding: 2rem 0;
+  box-shadow: 0px 0px 30px #e4e7ff;
+
   p {
     width: 95%;
     span {
@@ -213,16 +248,20 @@
 .container {
   .title {
     h1 {
-      margin: 0 0 4rem 0;
+      margin: 0;
       color: $black;
       font-size: 4rem;
       line-height: 0.95;
     }
   }
   .faq {
+      margin: 3rem 0 0 0;
     .question {
       color: $purple;
       margin: 15px 0;
+    }
+    .answer {
+      margin: 0 0 2rem 0;
     }
     .line {
       border-bottom: 1px solid #dde0ff;
@@ -234,7 +273,7 @@
   text-align: center;
   font-size: 10px;
   color: $pink;
-  margin: 0 0 5rem 0;
+  margin: 4rem 0 5rem 0;
   p {
     margin: 3px;
     img {
