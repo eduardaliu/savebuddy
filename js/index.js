@@ -1,5 +1,4 @@
-import { CountUp } from './countUp.js'
-
+import { CountUp } from "./countUp.js";
 
 const firstStamp = new CircleType(document.querySelector(".first-stamp"));
 firstStamp.radius(1);
@@ -64,79 +63,81 @@ secondPics.addEventListener("click", () => {
   secondImgs[current].style.animation = "fade 0.2s ease";
 });
 
-firstPics.addEventListener('mouseover', () => {
-    firstImgs.forEach(image => {
-        const x = 25 * Math.floor(Math.random() * 5 ) - 50;
-        const y = 25 * Math.floor(Math.random() * 5 ) - 50;
-        image.style.transform = `translate(${x}px, ${y}px)`
-    })
-})
+firstPics.addEventListener("mouseover", () => {
+  firstImgs.forEach((image) => {
+    const x = 25 * Math.floor(Math.random() * 5) - 50;
+    const y = 25 * Math.floor(Math.random() * 5) - 50;
+    image.style.transform = `translate(${x}px, ${y}px)`;
+  });
+});
 
-firstPics.addEventListener('mouseout', () => {
-    firstImgs.forEach(image => {
-        image.style.transform = `translate(0px, 0px)`
-    })
-})
+firstPics.addEventListener("mouseout", () => {
+  firstImgs.forEach((image) => {
+    const integer = Math.round(Math.random()) * 2 - 1;
+    const degrees = Math.floor(Math.random() * 10);
+    image.style.transform = `translate(0px, 0px) rotate(${
+      integer * degrees
+    }deg)`;
+  });
+});
 
-secondPics.addEventListener('mouseover', () => {
-    secondImgs.forEach(image => {
-        const x = 25 * Math.floor(Math.random() * 5 ) - 50;
-        const y = 25 * Math.floor(Math.random() * 5 ) - 50;
-        image.style.transform = `translate(${x}px, ${y}px)`
-    })
-})
+secondPics.addEventListener("mouseover", () => {
+  secondImgs.forEach((image) => {
+    const x = 25 * Math.floor(Math.random() * 5) - 50;
+    const y = 25 * Math.floor(Math.random() * 5) - 50;
+    image.style.transform = `translate(${x}px, ${y}px)`;
+  });
+});
 
-secondPics.addEventListener('mouseout', () => {
-    secondImgs.forEach(image => {
-        image.style.transform = `translate(0px, 0px)`
-    })
-})
+secondPics.addEventListener("mouseout", () => {
+    secondImgs.forEach((image) => {
+    const integer = Math.round(Math.random()) * 2 - 1;
+    const degrees = Math.floor(Math.random() * 10);
+    image.style.transform = `translate(0px, 0px) rotate(${
+      integer * degrees
+    }deg)`;
+  });
+});
 
-const tappable = document.querySelector(".tappable")
+const tappable = document.querySelector(".tappable");
 const bankDeets = document.querySelector(".bank");
 const infos = document.querySelector(".infos");
 const tooltip = document.querySelector(".tooltip");
 const taptocopy = document.querySelector(".taptocopy");
 
-
 const copy = () => {
-    const range = document.createRange();
-    range.selectNode(infos);
-    window.getSelection().removeAllRanges(); // clear current selection
-    window.getSelection().addRange(range); // to select text
-    document.execCommand("copy");
-    window.getSelection().removeAllRanges();// to deselect
+  const range = document.createRange();
+  range.selectNode(infos);
+  window.getSelection().removeAllRanges(); // clear current selection
+  window.getSelection().addRange(range); // to select text
+  document.execCommand("copy");
+  window.getSelection().removeAllRanges(); // to deselect
 
-    tooltip.style.animation = "copy 1s ease"
+  tooltip.style.animation = "copy 1s ease";
 
-    setTimeout(function(){ tooltip.style.animation = "" }, 1000);
-}
+  setTimeout(function () {
+    tooltip.style.animation = "";
+  }, 1000);
+};
 
 tappable.addEventListener("click", () => {
-    copy();
+  copy();
 });
 
-
-
 const options = {
-      decimalPlaces: 2,
-      duration: 2,
-      separator: '.',
-      decimal: ',',
-    };
-    let firstnr = new CountUp('firstnumber', 2255.17, options);
-    let secondnr = new CountUp('secondnumber', 1500.00, options);
-    let thirdnr = new CountUp('thirdnumber', 4000.00, options);
-    let fourthnr = new CountUp('fourthnumber', 1800.00, options);
+  decimalPlaces: 2,
+  duration: 2,
+  separator: ".",
+  decimal: ",",
+};
+let firstnr = new CountUp("firstnumber", 2255.17, options);
+let secondnr = new CountUp("secondnumber", 1500.0, options);
+let thirdnr = new CountUp("thirdnumber", 4000.0, options);
+let fourthnr = new CountUp("fourthnumber", 1800.0, options);
 
-    firstnr.start();
-    secondnr.start();
-    thirdnr.start();
-    fourthnr.start();
-
-
+firstnr.start();
+secondnr.start();
+thirdnr.start();
+fourthnr.start();
 
 console.log("🐶 🐶 🐶 SAVE BUDDY 🐶 🐶 🐶 hehe.");
-
-
-
