@@ -324,6 +324,16 @@ body {
   100% {
     opacity: 1; } }
 
+@keyframes copy {
+  0% {
+    opacity: 0;
+    transform: translateY(10px); }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    transform: translateY(-5px); } }
+
 .progressbar {
   position: fixed;
   z-index: 999;
@@ -494,13 +504,14 @@ body {
     font-size: 1.9rem;
     background-color: #4959df;
     padding: 2rem 0rem;
-    margin: 0 0 2rem 0;
+    margin: 0 0 1rem 0;
     border-radius: 60px;
     border: 0;
     cursor: pointer;
     box-shadow: 0px 0px 10px #4959df; }
   .pink-section .bank {
     display: flex;
+    cursor: pointer;
     color: #ffffff;
     font-size: 0.75rem;
     line-height: 1.7;
@@ -535,3 +546,20 @@ body {
     margin: 3px; }
     .footer p img {
       width: 10px; }
+
+.tooltip {
+  opacity: 0;
+  color: #4959df;
+  background-color: #f8f9fe;
+  padding: 5px;
+  margin: 0 0 10px 0;
+  border-radius: 15px;
+  font-size: 0.8rem; }
+  .tooltip:after {
+    content: "";
+    position: absolute;
+    margin-top: 20px;
+    margin-left: -30px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: #f8f9fe transparent transparent transparent; }

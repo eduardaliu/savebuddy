@@ -9,15 +9,17 @@ const bodyTag = document.querySelector("body");
 
 document.addEventListener("scroll", () => {
   const pixels = window.pageYOffset;
-  const pageHeight = bodyTag.getBoundingClientRect().height
-  const totalScroll = pageHeight - window.innerHeight
+  const pageHeight = bodyTag.getBoundingClientRect().height;
+  const totalScroll = pageHeight - window.innerHeight;
 
-  const percentage = pixels / totalScroll
-  progressBar.style.width = `${percentage * 100}%`
+  const percentage = pixels / totalScroll;
+  progressBar.style.width = `${percentage * 100}%`;
 
-  if (percentage * 100 > 50 ) {
-    progressBar.style.backgroundColor = '#4959df'
-  } else {progressBar.style.backgroundColor = '#fe9f99'}
+  if (percentage * 100 > 50) {
+    progressBar.style.backgroundColor = "#4959df";
+  } else {
+    progressBar.style.backgroundColor = "#fe9f99";
+  }
 });
 
 const firstPics = document.querySelector(".first-pics");
@@ -59,4 +61,31 @@ secondPics.addEventListener("click", () => {
   secondImgs[current].style.animation = "fade 0.2s ease";
 });
 
-console.log("TESTTTT");
+const bankDeets = document.querySelector(".bank");
+const infos = document.querySelector(".infos");
+const tooltip = document.querySelector(".tooltip");
+
+
+bankDeets.addEventListener("click", () => {
+
+    const range = document.createRange();
+    range.selectNode(infos);
+    window.getSelection().removeAllRanges(); // clear current selection
+    window.getSelection().addRange(range); // to select text
+    document.execCommand("copy");
+    window.getSelection().removeAllRanges();// to deselect
+
+    tooltip.style.animation = "copy 1s ease"
+
+    setTimeout(function(){ tooltip.style.animation = "" }, 1000);
+
+  console.log("test")
+});
+
+
+
+const copytext = () => {
+   
+}
+
+console.log("🐶 🐶 🐶 SAVE BUDDY 🐶 🐶 🐶 hehe.");

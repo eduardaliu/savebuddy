@@ -22,6 +22,20 @@
   }
 }
 
+@keyframes copy {
+    0% {
+      opacity: 0;
+      transform: translateY(10px)
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-5px);
+      }
+  }
+
 .progressbar {
   position: fixed;
   z-index: 999;
@@ -231,7 +245,7 @@
     font-size: 1.9rem;
     background-color: $purple;
     padding: 2rem 0rem;
-    margin: 0 0 2rem 0;
+    margin: 0 0 1rem 0;
     border-radius: 60px;
     border: 0;
     cursor: pointer;
@@ -239,6 +253,8 @@
   }
   .bank {
     display: flex;
+    cursor: pointer;
+    // background-color: red;
     color: $white;
     font-size: 0.75rem;
     line-height: 1.7;
@@ -288,3 +304,25 @@
     }
   }
 }
+
+
+
+.tooltip {
+    opacity: 0;
+    color: $purple;
+    background-color: $lightpurple;
+    padding: 5px;
+    margin: 0 0 10px 0;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    &:after {
+                content: "";
+                position: absolute;
+                margin-top: 20px;
+                margin-left: -30px;
+                border-width: 8px;
+                border-style: solid;
+                border-color: $lightpurple transparent transparent transparent;
+              }
+  }
+  
