@@ -250,7 +250,7 @@ const scene = new ScrollMagic.Scene({
   triggerHook: 0,
   reverse: false,
 })
-  .addIndicators()
+//   .addIndicators()
   .setTween(secondTL)
   .addTo(controller);
 
@@ -269,7 +269,7 @@ var secscene = new ScrollMagic.Scene({
       fourthnr.start();
     }, 600);
   })
-  .addIndicators()
+//   .addIndicators()
   .addTo(controller);
 
   const thiscene = new ScrollMagic.Scene({
@@ -277,7 +277,7 @@ var secscene = new ScrollMagic.Scene({
     triggerHook: 0,
     reverse: false,
   })
-    .addIndicators()
+    // .addIndicators()
     .setTween(thirdTL)
     .addTo(controller);
 
