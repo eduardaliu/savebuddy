@@ -6,6 +6,19 @@ const firstStamp = new CircleType(document.querySelector(".first-stamp"));
 const secondStamp = new CircleType(document.querySelector(".second-stamp"));
 // secondStamp.radius(1);
 
+
+const tappable = document.querySelector(".tappable");
+const bankDeets = document.querySelector(".bank");
+const infos = document.querySelector(".infos");
+const tooltip = document.querySelector(".tooltip");
+const taptocopy = document.querySelector(".taptocopy");
+
+const button = document.querySelector(".button")
+if (document.defaultView.innerWidth < 480) {
+    button.innerHTML = "Tap to Donate 🐶"
+    taptocopy.innerHTML = "Or tap to copy our bank details:"
+}
+
 const progressBar = document.querySelector(".progressbar");
 const bodyTag = document.querySelector("body");
 
@@ -99,11 +112,6 @@ secondPics.addEventListener("mouseout", () => {
   });
 });
 
-const tappable = document.querySelector(".tappable");
-const bankDeets = document.querySelector(".bank");
-const infos = document.querySelector(".infos");
-const tooltip = document.querySelector(".tooltip");
-const taptocopy = document.querySelector(".taptocopy");
 
 const copy = () => {
   const range = document.createRange();
