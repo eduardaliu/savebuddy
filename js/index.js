@@ -1,10 +1,10 @@
 import { CountUp } from "./countUp.js";
 
 const firstStamp = new CircleType(document.querySelector(".first-stamp"));
-firstStamp.radius(1);
+// firstStamp.radius(1);
 
 const secondStamp = new CircleType(document.querySelector(".second-stamp"));
-secondStamp.radius(1);
+// secondStamp.radius(1);
 
 const progressBar = document.querySelector(".progressbar");
 const bodyTag = document.querySelector("body");
