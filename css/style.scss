@@ -144,6 +144,7 @@
   height: 400px;
   justify-content: space-between;
   .first-stamp {
+    pointer-events: none;
     z-index: 999;
     position: absolute;
     left: 10%;
@@ -222,6 +223,7 @@
   height: 400px;
   //   background-color: red;
   .second-stamp {
+    pointer-events: none;
     z-index: 999;
     position: absolute;
     right: 20%;

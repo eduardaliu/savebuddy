@@ -67,14 +67,14 @@ firstPics.addEventListener("mouseover", () => {
   firstImgs.forEach((image) => {
     const x = 25 * Math.floor(Math.random() * 5) - 50;
     const y = 25 * Math.floor(Math.random() * 5) - 50;
-    image.style.transform = `translate(${x}px, ${y}px)`;
+    image.style.transform = `translate(${x/3}px, ${y/3}px)`;
   });
 });
 
 firstPics.addEventListener("mouseout", () => {
   firstImgs.forEach((image) => {
     const integer = Math.round(Math.random()) * 2 - 1;
-    const degrees = Math.floor(Math.random() * 10);
+    const degrees = Math.floor(Math.random() * 10) - 3;
     image.style.transform = `translate(0px, 0px) rotate(${
       integer * degrees
     }deg)`;
@@ -85,14 +85,14 @@ secondPics.addEventListener("mouseover", () => {
   secondImgs.forEach((image) => {
     const x = 25 * Math.floor(Math.random() * 5) - 50;
     const y = 25 * Math.floor(Math.random() * 5) - 50;
-    image.style.transform = `translate(${x}px, ${y}px)`;
+    image.style.transform = `translate(${x/3}px, ${y/3}px)`;
   });
 });
 
 secondPics.addEventListener("mouseout", () => {
     secondImgs.forEach((image) => {
     const integer = Math.round(Math.random()) * 2 - 1;
-    const degrees = Math.floor(Math.random() * 10);
+    const degrees = Math.floor(Math.random() * 10 - 3);
     image.style.transform = `translate(0px, 0px) rotate(${
       integer * degrees
     }deg)`;

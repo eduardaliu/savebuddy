@@ -417,6 +417,7 @@ body {
   height: 400px;
   justify-content: space-between; }
   .first-carousel .first-stamp {
+    pointer-events: none;
     z-index: 999;
     position: absolute;
     left: 10%;
@@ -481,6 +482,7 @@ body {
   margin: 4rem 0 2rem 0;
   height: 400px; }
   .second-carousel .second-stamp {
+    pointer-events: none;
     z-index: 999;
     position: absolute;
     right: 20%;
