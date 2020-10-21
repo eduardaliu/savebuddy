@@ -48,6 +48,11 @@
   }
 }
 
+// .reveal {
+//   width: 100vw;
+//   height: 100vh;
+// }
+
 .progressbar {
   position: fixed;
   z-index: 999;
@@ -69,7 +74,7 @@
   @media ($break-desktop) {
     .firstcontainer {
       max-width: 800px;
-      margin: auto
+      margin: auto;
     }
     p {
       width: 260px;
@@ -94,6 +99,22 @@
       width: 400px;
       h1 {
         font-size: 5rem;
+        -webkit-text-stroke: 2px $black;
+        -webkit-text-fill-color: rgba(0, 0, 0, 0);
+        span {
+          -webkit-text-fill-color: $black;
+        }
+      }
+    }
+    @media ($break-wide) {
+      width: 800px;
+      h1 {
+        -webkit-text-stroke: 2px $black;
+        -webkit-text-fill-color: rgba(0, 0, 0, 0);
+        font-size: 8rem;
+        span {
+          -webkit-text-fill-color: $black;
+        }
       }
     }
   }
@@ -137,12 +158,13 @@
   }
   .first-pics {
     img {
+      cursor: pointer;
+
       border-radius: 30px;
       position: absolute;
       right: 20px;
       width: 280px;
       transition: transform 0.5s ease, box-shadow 0.5s ease;
-      box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.3);
       &:nth-child(1) {
         transform: rotate(5deg);
       }
@@ -174,6 +196,7 @@
 
 .purple-section {
   background-image: url("../images/bone.png");
+  background-position: right;
   background-repeat: no-repeat;
   background-size: contain;
   background-color: $purple;
@@ -209,12 +232,12 @@
   }
   .second-pics {
     img {
+      cursor: pointer;
       border-radius: 30px;
       position: absolute;
       left: 50px;
       width: 280px;
       transition: transform 0.5s ease, box-shadow 0.5s ease;
-      box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.3);
       &:nth-child(1) {
         transform: rotate(5deg);
       }
@@ -231,13 +254,13 @@
     margin: 5rem auto;
     // background-color: red;
     .second-stamp {
-        right: 20%;
-        font-size: 1.5rem;
+      right: 20%;
+      font-size: 1.5rem;
     }
     .second-pics {
-        img {
-            width: 350px;
-        }
+      img {
+        width: 350px;
+      }
     }
   }
 }
@@ -327,6 +350,10 @@
     cursor: pointer;
     box-shadow: 0px 0px 10px $purple;
     animation: scale 2s infinite cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+    &:hover {
+      background-color: #2e3dc2;
+    }
   }
   .taptocopy {
     cursor: pointer;
@@ -363,7 +390,6 @@
       line-height: 0.95;
       @media ($break-desktop) {
         font-size: 5rem;
-
       }
     }
   }
@@ -388,7 +414,7 @@
 
 .footer {
   text-align: center;
-  font-size: 10px;
+  font-size: 0.75rem;
   color: $pink;
   margin: 4rem 0 5rem 0;
   p {

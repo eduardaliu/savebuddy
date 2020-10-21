@@ -381,7 +381,20 @@ body {
       .header .title {
         width: 400px; }
         .header .title h1 {
-          font-size: 5rem; } }
+          font-size: 5rem;
+          -webkit-text-stroke: 2px #37475a;
+          -webkit-text-fill-color: rgba(0, 0, 0, 0); }
+          .header .title h1 span {
+            -webkit-text-fill-color: #37475a; } }
+    @media (min-width: 1220px) {
+      .header .title {
+        width: 800px; }
+        .header .title h1 {
+          -webkit-text-stroke: 2px #37475a;
+          -webkit-text-fill-color: rgba(0, 0, 0, 0);
+          font-size: 8rem; }
+          .header .title h1 span {
+            -webkit-text-fill-color: #37475a; } }
   .header .languages {
     display: flex;
     flex-direction: column;
@@ -416,12 +429,12 @@ body {
         right: 20%;
         font-size: 1.5rem; } }
   .first-carousel .first-pics img {
+    cursor: pointer;
     border-radius: 30px;
     position: absolute;
     right: 20px;
     width: 280px;
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
-    box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.3); }
+    transition: transform 0.5s ease, box-shadow 0.5s ease; }
     .first-carousel .first-pics img:nth-child(1) {
       transform: rotate(5deg); }
     .first-carousel .first-pics img:nth-child(2) {
@@ -446,6 +459,7 @@ body {
 
 .purple-section {
   background-image: url("../images/bone.png");
+  background-position: right;
   background-repeat: no-repeat;
   background-size: contain;
   background-color: #4959df;
@@ -475,12 +489,12 @@ body {
     color: #fe9f99;
     animation: rotatereverse 5s infinite linear; }
   .second-carousel .second-pics img {
+    cursor: pointer;
     border-radius: 30px;
     position: absolute;
     left: 50px;
     width: 280px;
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
-    box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.3); }
+    transition: transform 0.5s ease, box-shadow 0.5s ease; }
     .second-carousel .second-pics img:nth-child(1) {
       transform: rotate(5deg); }
     .second-carousel .second-pics img:nth-child(2) {
@@ -571,7 +585,10 @@ body {
     border: 0;
     cursor: pointer;
     box-shadow: 0px 0px 10px #4959df;
-    animation: scale 2s infinite cubic-bezier(0.39, 0.575, 0.565, 1) both; }
+    animation: scale 2s infinite cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1); }
+    .pink-section button:hover {
+      background-color: #2e3dc2; }
   .pink-section .taptocopy {
     cursor: pointer;
     color: #ffffff;
@@ -617,7 +634,7 @@ body {
 
 .footer {
   text-align: center;
-  font-size: 10px;
+  font-size: 0.75rem;
   color: #fe9f99;
   margin: 4rem 0 5rem 0; }
   .footer p {

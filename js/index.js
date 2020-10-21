@@ -64,6 +64,34 @@ secondPics.addEventListener("click", () => {
   secondImgs[current].style.animation = "fade 0.2s ease";
 });
 
+firstPics.addEventListener('mouseover', () => {
+    firstImgs.forEach(image => {
+        const x = 25 * Math.floor(Math.random() * 5 ) - 50;
+        const y = 25 * Math.floor(Math.random() * 5 ) - 50;
+        image.style.transform = `translate(${x}px, ${y}px)`
+    })
+})
+
+firstPics.addEventListener('mouseout', () => {
+    firstImgs.forEach(image => {
+        image.style.transform = `translate(0px, 0px)`
+    })
+})
+
+secondPics.addEventListener('mouseover', () => {
+    secondImgs.forEach(image => {
+        const x = 25 * Math.floor(Math.random() * 5 ) - 50;
+        const y = 25 * Math.floor(Math.random() * 5 ) - 50;
+        image.style.transform = `translate(${x}px, ${y}px)`
+    })
+})
+
+secondPics.addEventListener('mouseout', () => {
+    secondImgs.forEach(image => {
+        image.style.transform = `translate(0px, 0px)`
+    })
+})
+
 const tappable = document.querySelector(".tappable")
 const bankDeets = document.querySelector(".bank");
 const infos = document.querySelector(".infos");
