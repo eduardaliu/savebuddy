@@ -325,9 +325,14 @@ body {
     opacity: 1; } }
 
 .progressbar {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 7px;
   background-color: #fe9f99;
-  width: 100vw;
-  height: 7px; }
+  transition: all 0.2s ease; }
 
 .container {
   width: 85vw;
@@ -376,7 +381,8 @@ body {
     position: absolute;
     right: 20px;
     width: 280px;
-    transition: transform 0.5s ease, box-shadow 0.5s ease; }
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.3); }
     .first-carousel .first-pics img:nth-child(1) {
       transform: rotate(5deg); }
     .first-carousel .first-pics img:nth-child(2) {
@@ -424,7 +430,8 @@ body {
     position: absolute;
     left: 50px;
     width: 280px;
-    transition: transform 0.5s ease, box-shadow 0.5s ease; }
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.3); }
     .second-carousel .second-pics img:nth-child(1) {
       transform: rotate(5deg); }
     .second-carousel .second-pics img:nth-child(2) {

@@ -23,9 +23,14 @@
 }
 
 .progressbar {
-  background-color: $pink;
-  width: 100vw;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 0%;
   height: 7px;
+  background-color: $pink;
+  transition: all 0.2s ease;
 }
 
 .container {
@@ -85,6 +90,7 @@
       right: 20px;
       width: 280px;
       transition: transform 0.5s ease, box-shadow 0.5s ease;
+      box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.3);
       &:nth-child(1) {
         transform: rotate(5deg);
       }
@@ -129,7 +135,7 @@
   position: relative;
   margin: 4rem 0 2rem 0;
   height: 400px;
-//   background-color: red;
+  //   background-color: red;
   .second-stamp {
     z-index: 999;
     position: absolute;
@@ -146,6 +152,7 @@
       left: 50px;
       width: 280px;
       transition: transform 0.5s ease, box-shadow 0.5s ease;
+      box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.3);
       &:nth-child(1) {
         transform: rotate(5deg);
       }
@@ -255,7 +262,7 @@
     }
   }
   .faq {
-      margin: 3rem 0 0 0;
+    margin: 3rem 0 0 0;
     .question {
       color: $purple;
       margin: 15px 0;
