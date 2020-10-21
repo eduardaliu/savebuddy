@@ -464,16 +464,26 @@
 }
 
 .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   text-align: center;
   font-size: 0.75rem;
-  color: $pink;
-  margin: 4rem 0 5rem 0;
-  p {
-    margin: 3px;
+  color: $lightpurple;
+  margin: 0;
+  padding: 0 5rem;
+  bottom: 0;
+  left: 0;
+  height: 70px;
+  background-color: $black;
+  transition: all 0.2s ease;
     img {
+      margin: 0;
       width: 10px;
     }
-  }
+    p {
+      margin: 0;
+    }
 }
 
 .tooltip {

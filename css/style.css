@@ -664,14 +664,24 @@ body {
         margin: 5rem auto; } }
 
 .footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   text-align: center;
   font-size: 0.75rem;
-  color: #fe9f99;
-  margin: 4rem 0 5rem 0; }
+  color: #f8f9fe;
+  margin: 0;
+  padding: 0 5rem;
+  bottom: 0;
+  left: 0;
+  height: 70px;
+  background-color: #37475a;
+  transition: all 0.2s ease; }
+  .footer img {
+    margin: 0;
+    width: 10px; }
   .footer p {
-    margin: 3px; }
-    .footer p img {
-      width: 10px; }
+    margin: 0; }
 
 .tooltip {
   opacity: 0;
