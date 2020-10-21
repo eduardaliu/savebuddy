@@ -358,10 +358,13 @@ body {
   .container p {
     margin: 4rem 0 0 0;
     width: 85%; }
-    @media (min-width: 768px) {
-      .container p {
-        width: 260px;
-        margin: -4rem 0 0 0; } }
+  @media (min-width: 768px) {
+    .container .firstcontainer {
+      max-width: 800px;
+      margin: auto; }
+    .container p {
+      width: 260px;
+      margin: -4rem 0 0 0; } }
 
 .header {
   display: flex;
@@ -410,7 +413,8 @@ body {
     animation: rotate 5s infinite linear; }
     @media (min-width: 768px) {
       .first-carousel .first-stamp {
-        right: 20%; } }
+        right: 20%;
+        font-size: 1.5rem; } }
   .first-carousel .first-pics img {
     border-radius: 30px;
     position: absolute;
@@ -448,12 +452,15 @@ body {
   padding: 1rem 0; }
   .purple-section .container {
     width: 70vw;
-    margin: 3rem 10vw;
+    margin: 3rem auto;
     color: #ffffff;
     font-size: 1.9rem;
     font-weight: 400; }
     .purple-section .container span {
       color: #fe9f99; }
+    @media (min-width: 768px) {
+      .purple-section .container {
+        max-width: 700px; } }
 
 .second-carousel {
   position: relative;
@@ -467,9 +474,6 @@ body {
     font-weight: 600;
     color: #fe9f99;
     animation: rotatereverse 5s infinite linear; }
-    @media (min-width: 768px) {
-      .second-carousel .second-stamp {
-        right: 20%; } }
   .second-carousel .second-pics img {
     border-radius: 30px;
     position: absolute;
@@ -484,9 +488,14 @@ body {
     @media (min-width: 480px) {
       .second-carousel .second-pics img {
         width: 310px; } }
-    @media (min-width: 768px) {
+  @media (min-width: 768px) {
+    .second-carousel {
+      max-width: 600px;
+      margin: 5rem auto; }
+      .second-carousel .second-stamp {
+        right: 20%;
+        font-size: 1.5rem; }
       .second-carousel .second-pics img {
-        margin: -1rem 30vw;
         width: 350px; } }
 
 .container-numbers {
@@ -528,7 +537,7 @@ body {
   @media (min-width: 768px) {
     .container-numbers {
       max-width: 600px;
-      margin-top: 7rem; } }
+      margin-top: 11rem; } }
 
 .pink-section {
   display: flex;
@@ -542,12 +551,15 @@ body {
   padding: 1rem 0; }
   .pink-section .container {
     width: 70vw;
-    margin: 4rem 10vw;
+    margin: 4rem auto;
     color: #ffffff;
     font-size: 1.9rem;
     font-weight: 400; }
     .pink-section .container span {
       color: #4959df; }
+    @media (min-width: 768px) {
+      .pink-section .container {
+        max-width: 700px; } }
   .pink-section button {
     color: #ffffff;
     width: 320px;
@@ -586,6 +598,9 @@ body {
     color: #37475a;
     font-size: 4rem;
     line-height: 0.95; }
+    @media (min-width: 768px) {
+      .containerfaq .title h1 {
+        font-size: 5rem; } }
   .containerfaq .faq {
     margin: 3rem 0 0 0; }
     .containerfaq .faq .question {

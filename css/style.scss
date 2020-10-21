@@ -65,7 +65,13 @@
   p {
     margin: 4rem 0 0 0;
     width: 85%;
-    @media ($break-desktop) {
+  }
+  @media ($break-desktop) {
+    .firstcontainer {
+      max-width: 800px;
+      margin: auto
+    }
+    p {
       width: 260px;
       margin: -4rem 0 0 0;
     }
@@ -126,6 +132,7 @@
     animation: rotate 5s infinite linear;
     @media ($break-desktop) {
       right: 20%;
+      font-size: 1.5rem;
     }
   }
   .first-pics {
@@ -173,12 +180,15 @@
   padding: 1rem 0;
   .container {
     width: 70vw;
-    margin: 3rem 10vw;
+    margin: 3rem auto;
     color: $white;
     font-size: 1.9rem;
     font-weight: 400;
     span {
       color: $pink;
+    }
+    @media ($break-desktop) {
+      max-width: 700px;
     }
   }
 }
@@ -196,9 +206,6 @@
     font-weight: 600;
     color: $pink;
     animation: rotatereverse 5s infinite linear;
-    @media ($break-desktop) {
-        right: 20%;
-      }
   }
   .second-pics {
     img {
@@ -217,10 +224,20 @@
       @media ($break-tablet) {
         width: 310px;
       }
-      @media ($break-desktop) {
-        margin: -1rem 30vw;
-        width: 350px;
-      }
+    }
+  }
+  @media ($break-desktop) {
+    max-width: 600px;
+    margin: 5rem auto;
+    // background-color: red;
+    .second-stamp {
+        right: 20%;
+        font-size: 1.5rem;
+    }
+    .second-pics {
+        img {
+            width: 350px;
+        }
     }
   }
 }
@@ -271,7 +288,7 @@
   }
   @media ($break-desktop) {
     max-width: 600px;
-    margin-top: 7rem;
+    margin-top: 11rem;
   }
 }
 
@@ -287,12 +304,15 @@
   padding: 1rem 0;
   .container {
     width: 70vw;
-    margin: 4rem 10vw;
+    margin: 4rem auto;
     color: $white;
     font-size: 1.9rem;
     font-weight: 400;
     span {
       color: $purple;
+    }
+    @media ($break-desktop) {
+      max-width: 700px;
     }
   }
   button {
@@ -341,6 +361,10 @@
       color: $black;
       font-size: 4rem;
       line-height: 0.95;
+      @media ($break-desktop) {
+        font-size: 5rem;
+
+      }
     }
   }
   .faq {
