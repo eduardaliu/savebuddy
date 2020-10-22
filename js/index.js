@@ -1,16 +1,35 @@
 import { CountUp } from "./countUp.js";
 
 const firstStamp = new CircleType(document.querySelector(".first-stamp"));
-// firstStamp.radius(1);
 
 const secondStamp = new CircleType(document.querySelector(".second-stamp"));
-// secondStamp.radius(1);
 
 const tappable = document.querySelector(".tappable");
 const bankDeets = document.querySelector(".bank");
 const infos = document.querySelector(".infos");
 const tooltip = document.querySelector(".tooltip");
 const taptocopy = document.querySelector(".taptocopy");
+
+const expanders = document.querySelectorAll(".expander");
+
+for (let i = 0; i < expanders.length; i++) {
+  expanders[i].addEventListener("click", (e) => {
+    let question = e.target; 
+    let answer = expanders[i].querySelector(".answer"); 
+    // console.log(e.target);
+    // console.log(question);
+    // console.log(answer);
+    if (!question.classList.contains("closed")) {
+      TweenLite.to(answer, 0.2, { height: 0 });
+      question.classList.add("closed");
+    } else {
+      TweenLite.set(answer, { height: "auto" });
+      TweenLite.from(answer, 0.2, { height: 0 });
+      question.classList.remove("closed");
+    }
+  });
+}
+
 
 const button = document.querySelector(".button");
 if (document.defaultView.innerWidth < 480) {
@@ -215,18 +234,18 @@ firstTL
 
 secondTL.from(purpletext, {
   delay: -0.5,
-  y: 225,
+  y: 200,
   opacity: 0,
-  duration: 2.6,
+  duration: 1.2,
   ease: "power3.inOut",
 });
 
 thirdTL
   .from(pinktext, {
     delay: -0.5,
-    y: 220,
+    y: 200,
     opacity: 0,
-    duration: 1,
+    duration: 1.2,
     ease: "power3.inOut",
   })
   .from(button, {
@@ -250,7 +269,7 @@ const scene = new ScrollMagic.Scene({
   triggerHook: 0,
   reverse: false,
 })
-//   .addIndicators()
+  //   .addIndicators()
   .setTween(secondTL)
   .addTo(controller);
 
@@ -269,17 +288,14 @@ var secscene = new ScrollMagic.Scene({
       fourthnr.start();
     }, 600);
   })
-//   .addIndicators()
+  //   .addIndicators()
   .addTo(controller);
 
-  const thiscene = new ScrollMagic.Scene({
-    triggerElement: "#thirdtrigger",
-    triggerHook: 0,
-    reverse: false,
-  })
-    // .addIndicators()
-    .setTween(thirdTL)
-    .addTo(controller);
-
-// const banner = document.querySelector("#bannerBg");
-// const bannerAddition = document.querySelector("#bannerBgAddition");
+const thiscene = new ScrollMagic.Scene({
+  triggerElement: "#thirdtrigger",
+  triggerHook: 0,
+  reverse: false,
+})
+//   .addIndicators()
+  .setTween(thirdTL)
+  .addTo(controller);

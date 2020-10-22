@@ -445,45 +445,53 @@
     }
   }
   .faq {
-    margin: 3rem 0 0 0;
+    margin: 3rem 0 6rem 0;
     .question {
       color: $purple;
       margin: 15px 0;
+      cursor: pointer;
+
     }
     .answer {
-      margin: 0 0 2rem 0;
+        overflow:hidden;
+      height: 0;
+    //   opacity: 0;
+    //   margin: 0 0 2rem 0;
     }
     .line {
       border-bottom: 1px solid #dde0ff;
     }
     @media ($break-desktop) {
       max-width: 500px;
-      margin: 5rem auto;
+      margin: 7rem auto;
     }
   }
 }
 
 .footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   text-align: center;
   font-size: 0.75rem;
   color: $lightpurple;
   margin: 0;
-  padding: 0 5rem;
+  padding: 0 2rem;
   bottom: 0;
   left: 0;
   height: 70px;
   background-color: $black;
   transition: all 0.2s ease;
-    img {
-      margin: 0;
-      width: 10px;
-    }
-    p {
-      margin: 0;
-    }
+  img {
+    margin: 0;
+    width: 10px;
+  }
+  p {
+    margin: 0;
+  }
+  @media ($break-desktop) {
+    padding: 0 5rem;
+  }
 }
 
 .tooltip {
@@ -504,3 +512,37 @@
     border-color: $lightpurple transparent transparent transparent;
   }
 }
+
+
+
+.smenu{
+    background: #333;
+    overflow: hidden;
+    transition: max-height 0.3s;
+    max-height: 0;
+  }
+  .smenu a{
+    display: block;
+    padding: 16px 26px;
+    color: white;
+    font-size: 14px;
+    margin: 4px 0;
+    position: relative;
+  }
+  .smenu a:before{
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background: #3498db;
+    left: 0;
+    top: 0;
+    transition: 0.3s;
+    opacity: 0;
+  }
+  .smenu a:hover:before{
+    opacity: 1;
+  }
+  .item:target .smenu{
+    max-height: 10em;
+  }

@@ -650,18 +650,20 @@ body {
       .containerfaq .title h1 {
         font-size: 5rem; } }
   .containerfaq .faq {
-    margin: 3rem 0 0 0; }
+    margin: 3rem 0 6rem 0; }
     .containerfaq .faq .question {
       color: #4959df;
-      margin: 15px 0; }
+      margin: 15px 0;
+      cursor: pointer; }
     .containerfaq .faq .answer {
-      margin: 0 0 2rem 0; }
+      overflow: hidden;
+      height: 0; }
     .containerfaq .faq .line {
       border-bottom: 1px solid #dde0ff; }
     @media (min-width: 868px) {
       .containerfaq .faq {
         max-width: 500px;
-        margin: 5rem auto; } }
+        margin: 7rem auto; } }
 
 .footer {
   display: flex;
@@ -671,7 +673,7 @@ body {
   font-size: 0.75rem;
   color: #f8f9fe;
   margin: 0;
-  padding: 0 5rem;
+  padding: 0 2rem;
   bottom: 0;
   left: 0;
   height: 70px;
@@ -682,6 +684,9 @@ body {
     width: 10px; }
   .footer p {
     margin: 0; }
+  @media (min-width: 868px) {
+    .footer {
+      padding: 0 5rem; } }
 
 .tooltip {
   opacity: 0;
@@ -699,3 +704,34 @@ body {
     border-width: 8px;
     border-style: solid;
     border-color: #f8f9fe transparent transparent transparent; }
+
+.smenu {
+  background: #333;
+  overflow: hidden;
+  transition: max-height 0.3s;
+  max-height: 0; }
+
+.smenu a {
+  display: block;
+  padding: 16px 26px;
+  color: white;
+  font-size: 14px;
+  margin: 4px 0;
+  position: relative; }
+
+.smenu a:before {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 100%;
+  background: #3498db;
+  left: 0;
+  top: 0;
+  transition: 0.3s;
+  opacity: 0; }
+
+.smenu a:hover:before {
+  opacity: 1; }
+
+.item:target .smenu {
+  max-height: 10em; }
