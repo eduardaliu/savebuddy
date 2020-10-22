@@ -446,6 +446,9 @@
   }
   .faq {
     margin: 3rem 0 6rem 0;
+    img {
+        margin: 0 5px 0 0;
+    }
     .question {
       color: $purple;
       margin: 15px 0;
@@ -545,4 +548,12 @@
   }
   .item:target .smenu{
     max-height: 10em;
+  }
+
+
+  canvas {
+    // background-color: red;
+      position: fixed;
+      top: 0;
+      pointer-events: none;
   }

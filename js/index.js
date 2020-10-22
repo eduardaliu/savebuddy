@@ -4,32 +4,97 @@ const firstStamp = new CircleType(document.querySelector(".first-stamp"));
 
 const secondStamp = new CircleType(document.querySelector(".second-stamp"));
 
+const drawCanvas = () => {
+  var canvas = document.querySelector("canvas");
+  var ctx = canvas.getContext("2d");
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  // Emoji array
+  var emojiArray = ["💰", "💸", "💵"];
+  var xPositions = [
+    window.innerWidth / 2,
+    window.innerWidth / 4,
+    (window.innerWidth / 4) * 3,
+    window.innerWidth / 8,
+    (window.innerWidth / 8) * 7,
+  ];
+  var yPositions = [0, 0, 0, 0, 0];
+  var arrayOfCurrentEmojis = [];
+
+  // Emoji Functionality
+  var emojiDrops = function () {
+    ctx.font = "40px serif";
+    for (var i = 0; i < xPositions.length; i++) {
+      arrayOfCurrentEmojis.push(
+        emojiArray[Math.floor(Math.random() * emojiArray.length - 1 + 1)]
+      );
+      ctx.fillText(arrayOfCurrentEmojis[i], xPositions[i], yPositions[i]);
+
+      // Here is random emoji movement code
+      yPositions[i] += Math.floor(Math.random() * 5 + 5);
+    }
+  };
+
+  // Initialize
+  function draw() {
+    ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+    emojiDrops();
+    window.requestAnimationFrame(draw);
+  }
+  draw();
+};
+
 const tappable = document.querySelector(".tappable");
 const bankDeets = document.querySelector(".bank");
 const infos = document.querySelector(".infos");
 const tooltip = document.querySelector(".tooltip");
 const taptocopy = document.querySelector(".taptocopy");
+// const arrows = document.querySelectorAll(".arrow")
 
 const expanders = document.querySelectorAll(".expander");
 
 for (let i = 0; i < expanders.length; i++) {
   expanders[i].addEventListener("click", (e) => {
-    let question = e.target; 
-    let answer = expanders[i].querySelector(".answer"); 
+    let question = e.target;
+    let answer = expanders[i].querySelector(".answer");
+    let arrow = expanders[i].querySelector("img");
     // console.log(e.target);
     // console.log(question);
     // console.log(answer);
     if (!question.classList.contains("closed")) {
-      TweenLite.to(answer, 0.2, { height: 0 });
+      gsap.to(answer, {
+        height: 0,
+        opacity: 0,
+        duration: 0.6,
+        ease: "power3.inOut",
+      });
+      gsap.to(arrow, {
+        rotate: 0,
+        duration: 0.6,
+        ease: "power3.inOut",
+      });
       question.classList.add("closed");
     } else {
-      TweenLite.set(answer, { height: "auto" });
-      TweenLite.from(answer, 0.2, { height: 0 });
+      gsap.set(answer, {
+        height: "auto",
+        opacity: 1,
+        ease: "power3.inOut",
+      });
+      gsap.from(answer, {
+        height: 0,
+        opacity: 1,
+        duration: 0.6,
+        ease: "power3.inOut",
+      });
+      gsap.to(arrow, {
+        rotate: 90,
+        duration: 0.6,
+        ease: "power3.inOut",
+      });
       question.classList.remove("closed");
     }
   });
 }
-
 
 const button = document.querySelector(".button");
 if (document.defaultView.innerWidth < 480) {
@@ -44,7 +109,6 @@ document.addEventListener("scroll", () => {
   const pixels = window.pageYOffset;
   const pageHeight = bodyTag.getBoundingClientRect().height;
   const totalScroll = pageHeight - window.innerHeight;
-
   const percentage = pixels / totalScroll;
   progressBar.style.width = `${percentage * 100}%`;
 
@@ -287,6 +351,11 @@ var secscene = new ScrollMagic.Scene({
     setTimeout(function () {
       fourthnr.start();
     }, 600);
+
+    var canvas = document.createElement("canvas");
+    document.body.appendChild(canvas); // adds the canvas to the body element
+    document.querySelector("#canvas").appendChild(canvas);
+    drawCanvas();
   })
   //   .addIndicators()
   .addTo(controller);
@@ -296,6 +365,6 @@ const thiscene = new ScrollMagic.Scene({
   triggerHook: 0,
   reverse: false,
 })
-//   .addIndicators()
+  //   .addIndicators()
   .setTween(thirdTL)
   .addTo(controller);

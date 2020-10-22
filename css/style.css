@@ -651,6 +651,8 @@ body {
         font-size: 5rem; } }
   .containerfaq .faq {
     margin: 3rem 0 6rem 0; }
+    .containerfaq .faq img {
+      margin: 0 5px 0 0; }
     .containerfaq .faq .question {
       color: #4959df;
       margin: 15px 0;
@@ -735,3 +737,8 @@ body {
 
 .item:target .smenu {
   max-height: 10em; }
+
+canvas {
+  position: fixed;
+  top: 0;
+  pointer-events: none; }
