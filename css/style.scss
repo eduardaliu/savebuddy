@@ -49,16 +49,16 @@
 }
 
 @keyframes rain {
-    0% {
-      opacity: 0;
-    }
-    50% {
-        opacity: 1;
-      }
-    100% {
-      opacity: 0;
-    }
+  0% {
+    opacity: 0;
   }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 
 // .reveal {
 //   width: 100vw;
@@ -177,8 +177,19 @@
     border-radius: 50px;
     background-color: $lightgray;
     .flag {
+        cursor: pointer;
       width: 30px;
       margin: 5px 0;
+      transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+      &:hover {
+        width: 40px;
+        margin: 0px 0;
+        opacity: 1;
+        filter: grayscale(0%);
+      }
+    }
+    .deactivated {
+        opacity: .5;
     }
     @media ($break-tablet) {
       flex-direction: row;
@@ -532,8 +543,7 @@ canvas {
   //   position: fixed;
   position: absolute;
   pointer-events: none;
-  opacity:0;
-//   transition: all 2s cubic-bezier(0.39, 0.575, 0.565, 1);
-  animation: rain 3s  cubic-bezier(0.39, 0.575, 0.565, 1) ;
-
+  opacity: 0;
+  //   transition: all 2s cubic-bezier(0.39, 0.575, 0.565, 1);
+  animation: rain 3s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
