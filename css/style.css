@@ -352,6 +352,9 @@ body {
   100% {
     opacity: 0; } }
 
+.no-scroll {
+  overflow: hidden; }
+
 .revealpink,
 .revealpurple,
 .revealwhite {
@@ -746,9 +749,12 @@ canvas {
   position: relative;
   height: 0px;
   background-color: #37475a;
+  text-align: center;
+  margin: 0px 0 -1px 0;
+  padding: 0 10px;
   transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1); }
   .imprintpop .text {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     color: #f8f9fe; }
     .imprintpop .text span {
       color: #fe9f99;

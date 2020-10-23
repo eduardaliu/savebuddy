@@ -6,6 +6,9 @@ const firstStamp = new CircleType(document.querySelector(".first-stamp"));
 
 const secondStamp = new CircleType(document.querySelector(".second-stamp"));
 
+document.querySelector("body").classList.add(".no-scroll")
+
+
 const drawCanvas = () => {
   var canvas = document.querySelector("canvas");
   var ctx = canvas.getContext("2d");
@@ -99,9 +102,24 @@ for (let i = 0; i < expanders.length; i++) {
 }
 
 const button = document.querySelector(".button");
+const buttonDE = document.querySelector(".button.de");
+const buttonPT = document.querySelector(".button.pt");
+const taptocopyDE = document.querySelector(".taptocopy.de");
+const taptocopyPT = document.querySelector(".taptocopy.pt");
+
 if (document.defaultView.innerWidth < 480) {
   button.innerHTML = "Tap to Donate 🐶";
   taptocopy.innerHTML = "Or tap to copy our bank details:";
+}
+
+if (document.defaultView.innerWidth < 480) {
+  buttonPT.innerHTML = "Toque para Doar 🐶";
+  taptocopyPT.innerHTML = "Ou toque para copiar nossos dados bancários:";
+}
+
+if (document.defaultView.innerWidth < 480) {
+  buttonDE.innerHTML = "Zum Spenden tippen 🐶";
+  taptocopyDE.innerHTML = "Ou toque para copiar nossos dados bancários:";
 }
 
 const progressBar = document.querySelector(".progressbar");
@@ -259,8 +277,8 @@ firstTL
     },
   })
   .add(function () {
-    document.querySelector("body").classList.remove("no-scroll");
-  })
+    document.querySelector("body").classList.add(".no-scroll")
+})
   .from(title, {
     delay: -0.5,
     y: 25,
@@ -377,11 +395,10 @@ const imprintPop = document.querySelector(".imprintpop");
 imprint.addEventListener("click", () => {
   if (imprintPop.style.height == "0px") {
     imprintPop.style.opacity = "1";
-    imprintPop.style.height = "70px"
-
-} else {
+    imprintPop.style.height = "70px";
+  } else {
     imprintPop.style.opacity = "0";
-    imprintPop.style.height = "0"
+    imprintPop.style.height = "0px";
   }
 });
 

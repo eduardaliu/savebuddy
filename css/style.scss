@@ -60,6 +60,10 @@
   }
 }
 
+.no-scroll {
+    overflow: hidden
+}
+
 // .reveal {
 //   width: 100vw;
 //   height: 100vh;
@@ -568,8 +572,11 @@ canvas {
   position: relative;
   height: 0px;
   background-color: $black;
+  text-align: center;
+  margin: 0px 0 -1px 0;
+  padding: 0 10px;
   .text {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     color: $lightpurple;
     span {
       color: $pink;
