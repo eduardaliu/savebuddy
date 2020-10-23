@@ -5,8 +5,7 @@ console.log("🐶 🐶 🐶 Help us save Buddy! 🐶 🐶 🐶");
 const firstStamp = new CircleType(document.querySelector(".first-stamp"));
 const secondStamp = new CircleType(document.querySelector(".second-stamp"));
 
-document.querySelector("body").classList.add(".no-scroll")
-
+document.querySelector("body").classList.add(".no-scroll");
 
 const tappable = document.querySelector(".tappable");
 const bankDeets = document.querySelector(".bank");
@@ -69,13 +68,13 @@ if (document.defaultView.innerWidth < 480) {
   button.innerHTML = "Tap to Donate 🐶";
   taptocopy.innerHTML = "Or tap to copy our bank details:";
 }
- if (buttonPT && document.defaultView.innerWidth < 480) {
+if (buttonPT && document.defaultView.innerWidth < 480) {
   buttonPT.innerHTML = "Toque para Doar 🐶";
   taptocopyPT.innerHTML = "Ou toque para copiar nossos dados bancários:";
 }
- if (buttonDE && document.defaultView.innerWidth < 480) {
-  buttonDE.innerHTML = "Zum Spenden tippen 🐶";
-  taptocopyDE.innerHTML = "Ou toque para copiar nossos dados bancários:";
+if (buttonDE && document.defaultView.innerWidth < 480) {
+  buttonDE.innerHTML = "Hier spenden 🐶";
+  taptocopyDE.innerHTML = "Oder hier tippen um unsere Bankinfos zu kopieren:";
 }
 
 const progressBar = document.querySelector(".progressbar");
@@ -105,31 +104,31 @@ let current = 0;
 let z = 1;
 
 firstPics.addEventListener("click", () => {
-  current++; 
+  current++;
   if (current > firstImgs.length - 1) {
     current = 0;
-  } 
+  }
 
   firstImgs.forEach((image) => {
     image.style.animation = "";
   });
 
-  z++; 
+  z++;
   firstImgs[current].style.zIndex = z;
   firstImgs[current].style.animation = "fade 0.2s ease";
 });
 
 secondPics.addEventListener("click", () => {
-  current++; 
+  current++;
   if (current > secondImgs.length - 1) {
     current = 0;
-  } 
+  }
 
   secondImgs.forEach((image) => {
     image.style.animation = "";
   });
 
-  z++; 
+  z++;
   secondImgs[current].style.zIndex = z;
   secondImgs[current].style.animation = "fade 0.2s ease";
 });
@@ -173,10 +172,10 @@ secondPics.addEventListener("mouseout", () => {
 const copy = () => {
   const range = document.createRange();
   range.selectNode(infos);
-  window.getSelection().removeAllRanges(); 
-  window.getSelection().addRange(range); 
+  window.getSelection().removeAllRanges();
+  window.getSelection().addRange(range);
   document.execCommand("copy");
-  window.getSelection().removeAllRanges(); 
+  window.getSelection().removeAllRanges();
 
   tooltip.style.animation = "copy 1s ease";
 
@@ -232,8 +231,8 @@ firstTL
     },
   })
   .add(function () {
-    document.querySelector("body").classList.add(".no-scroll")
-})
+    document.querySelector("body").classList.add(".no-scroll");
+  })
   .from(title, {
     delay: -0.5,
     y: 25,
@@ -324,7 +323,6 @@ const secscene = new ScrollMagic.Scene({
     setTimeout(function () {
       fourthnr.start();
     }, 600);
-
   })
   //   .addIndicators()
   .addTo(controller);
