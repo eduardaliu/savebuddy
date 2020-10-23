@@ -42,18 +42,6 @@
   }
 }
 
-@keyframes rain {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
 .no-scroll {
   overflow: hidden;
 }
@@ -526,15 +514,6 @@
     border-style: solid;
     border-color: $lightpurple transparent transparent transparent;
   }
-}
-
-canvas {
-  // background-color: red;
-  //   position: fixed;
-  position: absolute;
-  pointer-events: none;
-  opacity: 0;
-  animation: rain 3s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
 .imprintpop {

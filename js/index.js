@@ -7,45 +7,6 @@ const secondStamp = new CircleType(document.querySelector(".second-stamp"));
 
 document.querySelector("body").classList.add(".no-scroll")
 
-const drawCanvas = () => {
-  let canvas = document.querySelector("canvas");
-  let ctx = canvas.getContext("2d");
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-  // Emoji array
-  let emojiArray = ["💰", "💸", "💵"];
-  let xPositions = [
-    window.innerWidth / 2,
-    window.innerWidth / 4,
-    (window.innerWidth / 4) * 3,
-    window.innerWidth / 8,
-    (window.innerWidth / 8) * 7,
-  ];
-  let yPositions = [0, 0, 0, 0, 0];
-  let arrayOfCurrentEmojis = [];
-
-  // Emoji Functionality
-  let emojiDrops = function () {
-    ctx.font = "40px serif";
-    for (let i = 0; i < xPositions.length; i++) {
-      arrayOfCurrentEmojis.push(
-        emojiArray[Math.floor(Math.random() * emojiArray.length - 1 + 1)]
-      );
-      ctx.fillText(arrayOfCurrentEmojis[i], xPositions[i], yPositions[i]);
-
-      // Here is random emoji movement code
-      yPositions[i] += Math.floor(Math.random() * 5 + 5);
-    }
-  };
-
-  // Initialize
-  function draw() {
-    ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
-    emojiDrops();
-    window.requestAnimationFrame(draw);
-  }
-  draw();
-};
 
 const tappable = document.querySelector(".tappable");
 const bankDeets = document.querySelector(".bank");
@@ -365,12 +326,6 @@ const secscene = new ScrollMagic.Scene({
       fourthnr.start();
     }, 600);
 
-    let canvas = document.createElement("canvas");
-    document.body.appendChild(canvas); 
-    document.querySelector("#canvas").appendChild(canvas);
-    document.querySelector("#canvas").style.opacity = "1";
-
-    drawCanvas();
   })
   //   .addIndicators()
   .addTo(controller);
