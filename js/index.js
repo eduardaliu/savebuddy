@@ -3,33 +3,31 @@ import { CountUp } from "./countUp.js";
 console.log("🐶 🐶 🐶 Help us save Buddy! 🐶 🐶 🐶");
 
 const firstStamp = new CircleType(document.querySelector(".first-stamp"));
-
 const secondStamp = new CircleType(document.querySelector(".second-stamp"));
 
 document.querySelector("body").classList.add(".no-scroll")
 
-
 const drawCanvas = () => {
-  var canvas = document.querySelector("canvas");
-  var ctx = canvas.getContext("2d");
+  let canvas = document.querySelector("canvas");
+  let ctx = canvas.getContext("2d");
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
   // Emoji array
-  var emojiArray = ["💰", "💸", "💵"];
-  var xPositions = [
+  let emojiArray = ["💰", "💸", "💵"];
+  let xPositions = [
     window.innerWidth / 2,
     window.innerWidth / 4,
     (window.innerWidth / 4) * 3,
     window.innerWidth / 8,
     (window.innerWidth / 8) * 7,
   ];
-  var yPositions = [0, 0, 0, 0, 0];
-  var arrayOfCurrentEmojis = [];
+  let yPositions = [0, 0, 0, 0, 0];
+  let arrayOfCurrentEmojis = [];
 
   // Emoji Functionality
-  var emojiDrops = function () {
+  let emojiDrops = function () {
     ctx.font = "40px serif";
-    for (var i = 0; i < xPositions.length; i++) {
+    for (let i = 0; i < xPositions.length; i++) {
       arrayOfCurrentEmojis.push(
         emojiArray[Math.floor(Math.random() * emojiArray.length - 1 + 1)]
       );
@@ -146,31 +144,31 @@ let current = 0;
 let z = 1;
 
 firstPics.addEventListener("click", () => {
-  current++; // this is like a loop, everytime we click it adds one, and we use this number as the array index
+  current++; 
   if (current > firstImgs.length - 1) {
     current = 0;
-  } // has to go right after we add one to current
+  } 
 
   firstImgs.forEach((image) => {
     image.style.animation = "";
   });
 
-  z++; // we bring it to the front adding +1 to the highest current zindex
+  z++; 
   firstImgs[current].style.zIndex = z;
   firstImgs[current].style.animation = "fade 0.2s ease";
 });
 
 secondPics.addEventListener("click", () => {
-  current++; // this is like a loop, everytime we click it adds one, and we use this number as the array index
+  current++; 
   if (current > secondImgs.length - 1) {
     current = 0;
-  } // has to go right after we add one to current
+  } 
 
   secondImgs.forEach((image) => {
     image.style.animation = "";
   });
 
-  z++; // we bring it to the front adding +1 to the highest current zindex
+  z++; 
   secondImgs[current].style.zIndex = z;
   secondImgs[current].style.animation = "fade 0.2s ease";
 });
@@ -214,10 +212,10 @@ secondPics.addEventListener("mouseout", () => {
 const copy = () => {
   const range = document.createRange();
   range.selectNode(infos);
-  window.getSelection().removeAllRanges(); // clear current selection
-  window.getSelection().addRange(range); // to select text
+  window.getSelection().removeAllRanges(); 
+  window.getSelection().addRange(range); 
   document.execCommand("copy");
-  window.getSelection().removeAllRanges(); // to deselect
+  window.getSelection().removeAllRanges(); 
 
   tooltip.style.animation = "copy 1s ease";
 
@@ -352,7 +350,7 @@ const scene = new ScrollMagic.Scene({
   .setTween(secondTL)
   .addTo(controller);
 
-var secscene = new ScrollMagic.Scene({
+const secscene = new ScrollMagic.Scene({
   triggerElement: "#secondtrigger",
 })
   .on("start", function () {
@@ -367,8 +365,8 @@ var secscene = new ScrollMagic.Scene({
       fourthnr.start();
     }, 600);
 
-    var canvas = document.createElement("canvas");
-    document.body.appendChild(canvas); // adds the canvas to the body element
+    let canvas = document.createElement("canvas");
+    document.body.appendChild(canvas); 
     document.querySelector("#canvas").appendChild(canvas);
     document.querySelector("#canvas").style.opacity = "1";
 
@@ -398,8 +396,3 @@ imprint.addEventListener("click", () => {
     imprintPop.style.height = "0px";
   }
 });
-
-// imprintPop.addEventListener("click", () => {
-//     imprintPop.style.opacity = "0";
-//     imprintPop.style.width = "0"
-// })
