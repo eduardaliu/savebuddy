@@ -309,16 +309,10 @@ body {
   font-size: 16px;
   color: #37475a;
   line-height: 1.4; }
-  body.no-scroll {
-    overflow-y: hidden; }
 
 @keyframes rotate {
   100% {
     transform: rotate(360deg); } }
-
-@keyframes rotatereverse {
-  100% {
-    transform: rotate(-360deg); } }
 
 @keyframes fade {
   0% {
@@ -480,9 +474,13 @@ body {
     width: 280px;
     transition: transform 0.5s ease, box-shadow 0.5s ease; }
     .first-carousel .first-pics img:nth-child(1) {
-      transform: rotate(5deg); }
+      transform: rotate(5deg);
+      z-index: 1; }
     .first-carousel .first-pics img:nth-child(2) {
-      transform: rotate(-2deg); }
+      transform: rotate(-2deg);
+      z-index: 2; }
+    .first-carousel .first-pics img:nth-child(3) {
+      transform: rotate(1deg); }
     @media (min-width: 480px) {
       .first-carousel .first-pics img {
         width: 310px; } }
@@ -532,7 +530,7 @@ body {
     text-transform: uppercase;
     font-weight: 600;
     color: #fe9f99;
-    animation: rotatereverse 5s infinite linear; }
+    animation: rotate 5s infinite linear; }
   .second-carousel .second-pics img {
     cursor: pointer;
     border-radius: 30px;

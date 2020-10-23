@@ -54,7 +54,6 @@ const bankDeets = document.querySelector(".bank");
 const infos = document.querySelector(".infos");
 const tooltip = document.querySelector(".tooltip");
 const taptocopy = document.querySelector(".taptocopy");
-// const arrows = document.querySelectorAll(".arrow")
 
 const expanders = document.querySelectorAll(".expander");
 
@@ -111,13 +110,11 @@ if (document.defaultView.innerWidth < 480) {
   button.innerHTML = "Tap to Donate 🐶";
   taptocopy.innerHTML = "Or tap to copy our bank details:";
 }
-
-else if (document.defaultView.innerWidth < 480) {
+ if (buttonPT && document.defaultView.innerWidth < 480) {
   buttonPT.innerHTML = "Toque para Doar 🐶";
   taptocopyPT.innerHTML = "Ou toque para copiar nossos dados bancários:";
 }
-
-else if (document.defaultView.innerWidth < 480) {
+ if (buttonDE && document.defaultView.innerWidth < 480) {
   buttonDE.innerHTML = "Zum Spenden tippen 🐶";
   taptocopyDE.innerHTML = "Ou toque para copiar nossos dados bancários:";
 }

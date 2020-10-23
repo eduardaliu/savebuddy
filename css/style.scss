@@ -7,12 +7,6 @@
   }
 }
 
-@keyframes rotatereverse {
-  100% {
-    transform: rotate(-360deg);
-  }
-}
-
 @keyframes fade {
   0% {
     opacity: 0;
@@ -61,32 +55,8 @@
 }
 
 .no-scroll {
-    overflow: hidden
+  overflow: hidden;
 }
-
-// .reveal {
-//   width: 100vw;
-//   height: 100vh;
-// }
-
-// .banner-addition-bg {
-//     background: $blue;
-//     position: absolute;
-//     left: 0;
-//     right: 0;
-//     top: 0;
-//     bottom: 0;
-//     height: 100%;
-//   }
-//   .banner-bg {
-//     background: $lPink;
-//     position: absolute;
-//     left: 0;
-//     right: 0;
-//     top: 0;
-//     bottom: 0;
-//     height: 100%;
-//   }
 
 .revealpink,
 .revealpurple,
@@ -230,7 +200,6 @@
   .first-pics {
     img {
       cursor: pointer;
-
       border-radius: 30px;
       position: absolute;
       right: 20px;
@@ -238,9 +207,14 @@
       transition: transform 0.5s ease, box-shadow 0.5s ease;
       &:nth-child(1) {
         transform: rotate(5deg);
+        z-index: 1;
       }
       &:nth-child(2) {
         transform: rotate(-2deg);
+        z-index: 2;
+      }
+      &:nth-child(3) {
+        transform: rotate(1deg);
       }
       @media ($break-tablet) {
         width: 310px;
@@ -300,7 +274,7 @@
     text-transform: uppercase;
     font-weight: 600;
     color: $pink;
-    animation: rotatereverse 5s infinite linear;
+    animation: rotate 5s infinite linear;
   }
   .second-pics {
     img {
@@ -560,7 +534,6 @@ canvas {
   position: absolute;
   pointer-events: none;
   opacity: 0;
-  //   transition: all 2s cubic-bezier(0.39, 0.575, 0.565, 1);
   animation: rain 3s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 

@@ -1,15 +1,7 @@
-// $break-mobile: "screen and (max-width: 479px)";
-// $break-tablet: "screen and (max-width: 767px)";
-// $break-desktop: "min-width: 768px";
-
-
 $break-tablet: "min-width: 480px";
 $break-desktop: "min-width: 868px";
 $break-wide: "min-width: 1220px";
 
-
-
-// color
 $purple: #4959df;
 $lightpurple: #f8f9fe;
 $pink: #fe9f99;
@@ -24,8 +16,5 @@ body {
   background-color: $lightpurple;
   font-size: 16px;
   color: $black;
-  line-height: 1.4;  
-  &.no-scroll {
-    overflow-y: hidden;
-  }
+  line-height: 1.4;
 }
