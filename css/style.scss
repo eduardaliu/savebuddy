@@ -172,6 +172,7 @@
   height: 400px;
   justify-content: space-between;
   .first-stamp {
+    animation: rotate 5s infinite linear;
     pointer-events: none;
     z-index: 999;
     position: absolute;
@@ -179,7 +180,6 @@
     text-transform: uppercase;
     font-weight: 600;
     color: $pink;
-    animation: rotate 5s infinite linear;
     @media ($break-desktop) {
       right: 20%;
       font-size: 1.5rem;
@@ -254,6 +254,7 @@
   height: 400px;
   //   background-color: red;
   .second-stamp {
+    animation: rotate 5s infinite linear;
     pointer-events: none;
     z-index: 999;
     position: absolute;
@@ -261,7 +262,6 @@
     text-transform: uppercase;
     font-weight: 600;
     color: $pink;
-    animation: rotate 5s infinite linear;
   }
   .second-pics {
     img {

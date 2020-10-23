@@ -202,7 +202,6 @@ let fourthnr = new CountUp("fourthnumber", 1800.0, options);
 
 const revealpink = document.querySelector(".revealpink");
 const revealpurple = document.querySelector(".revealpurple");
-const revealwhite = document.querySelector(".revealwhite");
 
 const title = document.querySelector(".title");
 const intro = document.querySelectorAll("div.firstcontainer > p");
