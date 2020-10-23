@@ -199,6 +199,11 @@ let secondnr = new CountUp("secondnumber", 1500.0, options);
 let thirdnr = new CountUp("thirdnumber", 4000.0, options);
 let fourthnr = new CountUp("fourthnumber", 1800.0, options);
 
+let firstnrRS = new CountUp("firstnumberRS", 15053.67, options);
+let secondnrRS = new CountUp("secondnumberRS", 10000.0, options);
+let thirdnrRS = new CountUp("thirdnumberRS", 26700.0, options);
+let fourthnrRS = new CountUp("fourthnumberRS", 12000.0, options);
+
 const revealpink = document.querySelector(".revealpink");
 const revealpurple = document.querySelector(".revealpurple");
 
@@ -322,6 +327,16 @@ const secscene = new ScrollMagic.Scene({
     }, 400);
     setTimeout(function () {
       fourthnr.start();
+    }, 600);
+    firstnrRS.start();
+    setTimeout(function () {
+      secondnrRS.start();
+    }, 200);
+    setTimeout(function () {
+      thirdnrRS.start();
+    }, 400);
+    setTimeout(function () {
+      fourthnrRS.start();
     }, 600);
   })
   //   .addIndicators()
