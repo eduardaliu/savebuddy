@@ -172,24 +172,24 @@
   }
   .languages {
     display: flex;
+    justify-content: center;
     flex-direction: column;
     padding: 7px;
     border-radius: 50px;
     background-color: $lightgray;
     .flag {
-        cursor: pointer;
+      cursor: pointer;
       width: 30px;
       margin: 5px 0;
       transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
       &:hover {
         width: 40px;
-        margin: 0px 0;
+        margin: 0px -5px;
         opacity: 1;
-        filter: grayscale(0%);
       }
     }
     .deactivated {
-        opacity: .5;
+      opacity: 0.5;
     }
     @media ($break-tablet) {
       flex-direction: row;
@@ -460,11 +460,14 @@
     h1 {
       margin: 0;
       color: $black;
-      font-size: 4rem;
+      font-size: 2rem;
       line-height: 0.95;
       @media ($break-desktop) {
         font-size: 5rem;
       }
+    }
+    .pt {
+      font-size: 1rem;
     }
   }
   .faq {
