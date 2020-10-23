@@ -338,14 +338,6 @@ body {
   100% {
     transform: scale(1); } }
 
-@keyframes rain {
-  0% {
-    opacity: 0; }
-  50% {
-    opacity: 1; }
-  100% {
-    opacity: 0; } }
-
 .no-scroll {
   overflow: hidden; }
 
@@ -477,8 +469,7 @@ body {
       transform: rotate(5deg);
       z-index: 1; }
     .first-carousel .first-pics img:nth-child(2) {
-      transform: rotate(-2deg);
-      z-index: 2; }
+      transform: rotate(-2deg); }
     .first-carousel .first-pics img:nth-child(3) {
       transform: rotate(1deg); }
     @media (min-width: 480px) {
@@ -539,7 +530,8 @@ body {
     width: 280px;
     transition: transform 0.5s ease, box-shadow 0.5s ease; }
     .second-carousel .second-pics img:nth-child(1) {
-      transform: rotate(5deg); }
+      transform: rotate(5deg);
+      z-index: 1; }
     .second-carousel .second-pics img:nth-child(2) {
       transform: rotate(-2deg); }
     @media (min-width: 480px) {
@@ -732,12 +724,6 @@ body {
     border-width: 8px;
     border-style: solid;
     border-color: #f8f9fe transparent transparent transparent; }
-
-canvas {
-  position: absolute;
-  pointer-events: none;
-  opacity: 0;
-  animation: rain 3s cubic-bezier(0.39, 0.575, 0.565, 1); }
 
 .imprintpop {
   opacity: 0;
