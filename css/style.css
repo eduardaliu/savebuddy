@@ -446,7 +446,9 @@ body {
       .header .languages {
         flex-direction: row; }
         .header .languages .flag {
-          margin: 5px 5px; } }
+          margin: 5px 5px; }
+          .header .languages .flag:hover {
+            margin: 0px 0px; } }
 
 .first-carousel {
   position: relative;
@@ -710,6 +712,8 @@ body {
       padding: 0 5rem; } }
   .footer .imprint {
     cursor: pointer; }
+    .footer .imprint:active {
+      color: #fe9f99; }
 
 .tooltip {
   opacity: 0;
@@ -742,8 +746,10 @@ canvas {
   position: relative;
   height: 0px;
   background-color: #37475a;
-  box-shadow: 0px 0px 10px #37475a;
   transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1); }
   .imprintpop .text {
     font-size: 0.75rem;
     color: #f8f9fe; }
+    .imprintpop .text span {
+      color: #fe9f99;
+      padding: 0 10px 0 10px; }

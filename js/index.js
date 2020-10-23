@@ -377,7 +377,7 @@ const imprintPop = document.querySelector(".imprintpop");
 imprint.addEventListener("click", () => {
   if (imprintPop.style.height == "0px") {
     imprintPop.style.opacity = "1";
-    imprintPop.style.height = "100px"
+    imprintPop.style.height = "70px"
 
 } else {
     imprintPop.style.opacity = "0";

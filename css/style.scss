@@ -195,6 +195,9 @@
       flex-direction: row;
       .flag {
         margin: 5px 5px;
+        &:hover {
+          margin: 0px 0px;
+        }
       }
     }
   }
@@ -522,6 +525,9 @@
   }
   .imprint {
     cursor: pointer;
+    &:active {
+      color: $pink;
+    }
   }
 }
 
@@ -560,17 +566,16 @@ canvas {
   justify-content: center;
   align-items: center;
   position: relative;
-  //   margin: -20vh auto 10vh auto;
-  //   width: 0vw;
-  //   max-width: 400px;
   height: 0px;
-  //   max-height: 150px;
-  //   border-radius: 30px;
-  background-color: rgba(55, 71, 90, 1);
-  box-shadow: 0px 0px 10px $black;
+  background-color: $black;
   .text {
     font-size: 0.75rem;
     color: $lightpurple;
+    span {
+      color: $pink;
+      padding: 0 10px 0 10px;
+    }
   }
+
   transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
