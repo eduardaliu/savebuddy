@@ -344,6 +344,14 @@ body {
   100% {
     transform: scale(1); } }
 
+@keyframes rain {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
 .revealpink,
 .revealpurple,
 .revealwhite {
@@ -707,38 +715,8 @@ body {
     border-style: solid;
     border-color: #f8f9fe transparent transparent transparent; }
 
-.smenu {
-  background: #333;
-  overflow: hidden;
-  transition: max-height 0.3s;
-  max-height: 0; }
-
-.smenu a {
-  display: block;
-  padding: 16px 26px;
-  color: white;
-  font-size: 14px;
-  margin: 4px 0;
-  position: relative; }
-
-.smenu a:before {
-  content: "";
-  position: absolute;
-  width: 6px;
-  height: 100%;
-  background: #3498db;
-  left: 0;
-  top: 0;
-  transition: 0.3s;
-  opacity: 0; }
-
-.smenu a:hover:before {
-  opacity: 1; }
-
-.item:target .smenu {
-  max-height: 10em; }
-
 canvas {
-  position: fixed;
-  top: 0;
-  pointer-events: none; }
+  position: absolute;
+  pointer-events: none;
+  opacity: 0;
+  animation: rain 3s cubic-bezier(0.39, 0.575, 0.565, 1); }

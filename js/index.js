@@ -1,5 +1,8 @@
 import { CountUp } from "./countUp.js";
 
+console.log("🐶 🐶 🐶 Help us save Buddy! 🐶 🐶 🐶");
+
+
 const firstStamp = new CircleType(document.querySelector(".first-stamp"));
 
 const secondStamp = new CircleType(document.querySelector(".second-stamp"));
@@ -224,7 +227,6 @@ let secondnr = new CountUp("secondnumber", 1500.0, options);
 let thirdnr = new CountUp("thirdnumber", 4000.0, options);
 let fourthnr = new CountUp("fourthnumber", 1800.0, options);
 
-console.log("🐶 🐶 🐶 SAVE BUDDY 🐶 🐶 🐶 hehe.");
 
 const revealpink = document.querySelector(".revealpink");
 const revealpurple = document.querySelector(".revealpurple");
@@ -300,7 +302,7 @@ secondTL.from(purpletext, {
   delay: -0.5,
   y: 200,
   opacity: 0,
-  duration: 1.2,
+  duration: 1,
   ease: "power3.inOut",
 });
 
@@ -309,7 +311,7 @@ thirdTL
     delay: -0.5,
     y: 200,
     opacity: 0,
-    duration: 1.2,
+    duration: 1,
     ease: "power3.inOut",
   })
   .from(button, {
@@ -355,7 +357,10 @@ var secscene = new ScrollMagic.Scene({
     var canvas = document.createElement("canvas");
     document.body.appendChild(canvas); // adds the canvas to the body element
     document.querySelector("#canvas").appendChild(canvas);
+    document.querySelector("#canvas").style.opacity = "1";
+
     drawCanvas();
+
   })
   //   .addIndicators()
   .addTo(controller);

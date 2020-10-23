@@ -48,6 +48,18 @@
   }
 }
 
+@keyframes rain {
+    0% {
+      opacity: 0;
+    }
+    50% {
+        opacity: 1;
+      }
+    100% {
+      opacity: 0;
+    }
+  }
+
 // .reveal {
 //   width: 100vw;
 //   height: 100vh;
@@ -447,19 +459,18 @@
   .faq {
     margin: 3rem 0 6rem 0;
     img {
-        margin: 0 5px 0 0;
+      margin: 0 5px 0 0;
     }
     .question {
       color: $purple;
       margin: 15px 0;
       cursor: pointer;
-
     }
     .answer {
-        overflow:hidden;
+      overflow: hidden;
       height: 0;
-    //   opacity: 0;
-    //   margin: 0 0 2rem 0;
+      //   opacity: 0;
+      //   margin: 0 0 2rem 0;
     }
     .line {
       border-bottom: 1px solid #dde0ff;
@@ -516,44 +527,13 @@
   }
 }
 
+canvas {
+  // background-color: red;
+  //   position: fixed;
+  position: absolute;
+  pointer-events: none;
+  opacity:0;
+//   transition: all 2s cubic-bezier(0.39, 0.575, 0.565, 1);
+  animation: rain 3s  cubic-bezier(0.39, 0.575, 0.565, 1) ;
 
-
-.smenu{
-    background: #333;
-    overflow: hidden;
-    transition: max-height 0.3s;
-    max-height: 0;
-  }
-  .smenu a{
-    display: block;
-    padding: 16px 26px;
-    color: white;
-    font-size: 14px;
-    margin: 4px 0;
-    position: relative;
-  }
-  .smenu a:before{
-    content: "";
-    position: absolute;
-    width: 6px;
-    height: 100%;
-    background: #3498db;
-    left: 0;
-    top: 0;
-    transition: 0.3s;
-    opacity: 0;
-  }
-  .smenu a:hover:before{
-    opacity: 1;
-  }
-  .item:target .smenu{
-    max-height: 10em;
-  }
-
-
-  canvas {
-    // background-color: red;
-      position: fixed;
-      top: 0;
-      pointer-events: none;
-  }
+}
