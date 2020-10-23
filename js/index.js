@@ -112,12 +112,12 @@ if (document.defaultView.innerWidth < 480) {
   taptocopy.innerHTML = "Or tap to copy our bank details:";
 }
 
-if (document.defaultView.innerWidth < 480) {
+else if (document.defaultView.innerWidth < 480) {
   buttonPT.innerHTML = "Toque para Doar 🐶";
   taptocopyPT.innerHTML = "Ou toque para copiar nossos dados bancários:";
 }
 
-if (document.defaultView.innerWidth < 480) {
+else if (document.defaultView.innerWidth < 480) {
   buttonDE.innerHTML = "Zum Spenden tippen 🐶";
   taptocopyDE.innerHTML = "Ou toque para copiar nossos dados bancários:";
 }
