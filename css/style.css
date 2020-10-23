@@ -379,7 +379,7 @@ body {
   width: 0%;
   height: 7px;
   background-color: #fe9f99;
-  transition: all 0.2s ease; }
+  transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1); }
 
 .container {
   width: 85vw;
@@ -708,6 +708,8 @@ body {
   @media (min-width: 868px) {
     .footer {
       padding: 0 5rem; } }
+  .footer .imprint {
+    cursor: pointer; }
 
 .tooltip {
   opacity: 0;
@@ -731,3 +733,22 @@ canvas {
   pointer-events: none;
   opacity: 0;
   animation: rain 3s cubic-bezier(0.39, 0.575, 0.565, 1); }
+
+.imprintpop {
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: -20vh auto 10vh auto;
+  width: 0vw;
+  max-width: 400px;
+  height: 20vh;
+  max-height: 150px;
+  border-radius: 30px;
+  background-color: #37475a;
+  box-shadow: 0px 0px 10px #37475a;
+  transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1); }
+  .imprintpop .text {
+    font-size: 0.75rem;
+    color: #f8f9fe; }

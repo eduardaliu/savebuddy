@@ -113,7 +113,7 @@
   width: 0%;
   height: 7px;
   background-color: $pink;
-  transition: all 0.2s ease;
+  transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
 .container {
@@ -520,6 +520,9 @@
   @media ($break-desktop) {
     padding: 0 5rem;
   }
+  .imprint {
+      cursor: pointer;
+  }
 }
 
 .tooltip {
@@ -549,4 +552,25 @@ canvas {
   opacity: 0;
   //   transition: all 2s cubic-bezier(0.39, 0.575, 0.565, 1);
   animation: rain 3s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.imprintpop {
+    opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: -20vh auto 10vh auto;
+  width: 0vw;
+  max-width: 400px;
+  height: 20vh;
+  max-height: 150px;
+  border-radius: 30px;
+  background-color: rgba(55, 71, 90, 1);
+  box-shadow: 0px 0px 10px $black;
+  .text {
+    font-size: 0.75rem;
+    color: $lightpurple;
+  }
+  transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
 }

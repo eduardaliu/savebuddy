@@ -2,7 +2,6 @@ import { CountUp } from "./countUp.js";
 
 console.log("🐶 🐶 🐶 Help us save Buddy! 🐶 🐶 🐶");
 
-
 const firstStamp = new CircleType(document.querySelector(".first-stamp"));
 
 const secondStamp = new CircleType(document.querySelector(".second-stamp"));
@@ -227,7 +226,6 @@ let secondnr = new CountUp("secondnumber", 1500.0, options);
 let thirdnr = new CountUp("thirdnumber", 4000.0, options);
 let fourthnr = new CountUp("fourthnumber", 1800.0, options);
 
-
 const revealpink = document.querySelector(".revealpink");
 const revealpurple = document.querySelector(".revealpurple");
 const revealwhite = document.querySelector(".revealwhite");
@@ -360,7 +358,6 @@ var secscene = new ScrollMagic.Scene({
     document.querySelector("#canvas").style.opacity = "1";
 
     drawCanvas();
-
   })
   //   .addIndicators()
   .addTo(controller);
@@ -373,3 +370,22 @@ const thiscene = new ScrollMagic.Scene({
   //   .addIndicators()
   .setTween(thirdTL)
   .addTo(controller);
+
+const imprint = document.querySelector(".imprint");
+const imprintPop = document.querySelector(".imprintpop");
+
+imprint.addEventListener("click", () => {
+  if (imprintPop.style.opacity == 0) {
+    imprintPop.style.opacity = "1";
+    imprintPop.style.width = "80vw"
+
+} else {
+    imprintPop.style.opacity = "0";
+    imprintPop.style.width = "0"
+  }
+});
+
+imprintPop.addEventListener("click", () => {
+    imprintPop.style.opacity = "0";
+    imprintPop.style.width = "0"
+})
