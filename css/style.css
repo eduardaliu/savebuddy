@@ -446,14 +446,14 @@ body {
   height: 400px;
   justify-content: space-between; }
   .first-carousel .first-stamp {
+    animation: rotate 5s infinite linear;
     pointer-events: none;
     z-index: 999;
     position: absolute;
     left: 10%;
     text-transform: uppercase;
     font-weight: 600;
-    color: #fe9f99;
-    animation: rotate 5s infinite linear; }
+    color: #fe9f99; }
     @media (min-width: 868px) {
       .first-carousel .first-stamp {
         right: 20%;
@@ -514,14 +514,14 @@ body {
   margin: 4rem 0 2rem 0;
   height: 400px; }
   .second-carousel .second-stamp {
+    animation: rotate 5s infinite linear;
     pointer-events: none;
     z-index: 999;
     position: absolute;
     right: 20%;
     text-transform: uppercase;
     font-weight: 600;
-    color: #fe9f99;
-    animation: rotate 5s infinite linear; }
+    color: #fe9f99; }
   .second-carousel .second-pics img {
     cursor: pointer;
     border-radius: 30px;
@@ -635,14 +635,14 @@ body {
   .pink-section .taptocopy {
     cursor: pointer;
     color: #ffffff;
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     line-height: 1.7;
     margin: 0 0 10px 0; }
   .pink-section .bank {
     display: flex;
     cursor: pointer;
     color: #ffffff;
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     line-height: 1.7;
     margin: 0 0 3rem 0; }
     .pink-section .bank .labels {
