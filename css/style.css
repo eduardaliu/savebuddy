@@ -740,12 +740,7 @@ canvas {
   justify-content: center;
   align-items: center;
   position: relative;
-  margin: -20vh auto 10vh auto;
-  width: 0vw;
-  max-width: 400px;
-  height: 20vh;
-  max-height: 150px;
-  border-radius: 30px;
+  height: 0px;
   background-color: #37475a;
   box-shadow: 0px 0px 10px #37475a;
   transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1); }

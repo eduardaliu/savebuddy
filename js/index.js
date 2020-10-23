@@ -375,17 +375,17 @@ const imprint = document.querySelector(".imprint");
 const imprintPop = document.querySelector(".imprintpop");
 
 imprint.addEventListener("click", () => {
-  if (imprintPop.style.opacity == 0) {
+  if (imprintPop.style.height == "0px") {
     imprintPop.style.opacity = "1";
-    imprintPop.style.width = "80vw"
+    imprintPop.style.height = "100px"
 
 } else {
     imprintPop.style.opacity = "0";
-    imprintPop.style.width = "0"
+    imprintPop.style.height = "0"
   }
 });
 
-imprintPop.addEventListener("click", () => {
-    imprintPop.style.opacity = "0";
-    imprintPop.style.width = "0"
-})
+// imprintPop.addEventListener("click", () => {
+//     imprintPop.style.opacity = "0";
+//     imprintPop.style.width = "0"
+// })

@@ -521,7 +521,7 @@
     padding: 0 5rem;
   }
   .imprint {
-      cursor: pointer;
+    cursor: pointer;
   }
 }
 
@@ -555,17 +555,17 @@ canvas {
 }
 
 .imprintpop {
-    opacity: 0;
+  opacity: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  margin: -20vh auto 10vh auto;
-  width: 0vw;
-  max-width: 400px;
-  height: 20vh;
-  max-height: 150px;
-  border-radius: 30px;
+  //   margin: -20vh auto 10vh auto;
+  //   width: 0vw;
+  //   max-width: 400px;
+  height: 0px;
+  //   max-height: 150px;
+  //   border-radius: 30px;
   background-color: rgba(55, 71, 90, 1);
   box-shadow: 0px 0px 10px $black;
   .text {
