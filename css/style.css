@@ -580,6 +580,9 @@ body {
     text-align: center;
     color: #4959df;
     padding: 0 8px 0 0; }
+    .container-numbers .pin a {
+      color: #4959df;
+      text-decoration: none; }
   .container-numbers .data {
     width: 80%;
     margin: 1.5rem 0; }
