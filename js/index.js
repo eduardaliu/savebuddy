@@ -215,6 +215,8 @@ const languages = document.querySelector(".languages");
 const purpletext = document.querySelectorAll("div.purple-section > .container");
 const pinktext = document.querySelectorAll("div.pink-section > .container");
 const bank = document.querySelectorAll("div.pink-section > span");
+const paypal = document.querySelector(".paypal");
+
 
 const firstTL = gsap.timeline();
 const secondTL = gsap.timeline();
@@ -291,7 +293,14 @@ thirdTL
   })
   .from(button, {
     delay: -0.5,
-    x: 2220,
+    y: 200,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.inOut",
+  })
+  .from(paypal, {
+    delay: -0.5,
+    y: 20,
     opacity: 0,
     duration: 1,
     ease: "power3.inOut",

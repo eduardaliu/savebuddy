@@ -652,6 +652,9 @@ body {
       font-weight: 600; }
     .pink-section .bank .break {
       width: 10px; }
+    .pink-section .bank a {
+      text-decoration: none;
+      color: #ffffff; }
 
 .containerfaq {
   width: 85vw;
@@ -746,3 +749,8 @@ body {
     .imprintpop .text span {
       color: #fe9f99;
       padding: 0 10px 0 10px; }
+
+.paypal {
+  color: #4959df;
+  font-size: 0.80rem;
+  margin: 10px 0 0 0; }

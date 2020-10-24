@@ -423,6 +423,10 @@ text-decoration: none;
     .break {
       width: 10px;
     }
+    a {
+        text-decoration: none;
+        color: $white;
+      }
   }
 }
 
@@ -541,4 +545,10 @@ text-decoration: none;
   }
 
   transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.paypal {
+    color: $purple;
+    font-size: 0.80rem;
+    margin: 10px 0 0 0;
 }
