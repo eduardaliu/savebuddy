@@ -754,3 +754,10 @@ body {
   color: #4959df;
   font-size: 0.80rem;
   margin: 10px 0 0 0; }
+
+.textpath {
+  fill: #fff5f3;
+  font-size: 3rem; }
+  @media (min-width: 868px) {
+    .textpath {
+      font-size: 1.9rem; } }

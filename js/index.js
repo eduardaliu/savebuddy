@@ -70,7 +70,7 @@ if (document.defaultView.innerWidth < 480) {
 }
 if (buttonPT && document.defaultView.innerWidth < 480) {
   buttonPT.innerHTML = "Toque para Doar 🐶";
-  taptocopyPT.innerHTML = "Ou toque para copiar nossos dados bancários:";
+  taptocopyPT.innerHTML = "Toque para copiar nossos dados bancários:";
 }
 if (buttonDE && document.defaultView.innerWidth < 480) {
   buttonDE.innerHTML = "Hier spenden 🐶";
@@ -216,7 +216,7 @@ const purpletext = document.querySelectorAll("div.purple-section > .container");
 const pinktext = document.querySelectorAll("div.pink-section > .container");
 const bank = document.querySelectorAll("div.pink-section > span");
 const paypal = document.querySelector(".paypal");
-
+const svg = document.querySelector(".svg");
 
 const firstTL = gsap.timeline();
 const secondTL = gsap.timeline();
@@ -311,6 +311,13 @@ thirdTL
     opacity: 0,
     duration: 1,
     ease: "power3.inOut",
+  })
+  .from(svg, {
+    delay: -0.5,
+    y: 20,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.inOut",
   });
 
 const controller = new ScrollMagic.Controller();
@@ -372,3 +379,31 @@ imprint.addEventListener("click", () => {
     imprintPop.style.height = "0px";
   }
 });
+
+const textPath = document.querySelector("#pathselect");
+const textPathPT = document.querySelector("#pathselectpt");
+const textPathDE = document.querySelector("#pathselectde");
+
+const donations = "💸 Thank you ";
+const donationsPT = "💸 Obrigado ";
+const donationsDE = "💸 Danke ";
+
+const repeatedText = new Array(50).fill(donations).join("");
+const repeatedTextPT = new Array(50).fill(donationsPT).join("");
+const repeatedTextDE = new Array(50).fill(donationsDE).join("");
+
+if (textPath) {
+  textPath.innerHTML =
+    repeatedText +
+    ` <animate attributeName="startOffset" from="0%" to ="-500%" begin="0s" dur="50s" repeatCount="indefinite"/>`;
+}
+if (textPathPT) {
+  textPathPT.innerHTML =
+    repeatedTextPT +
+    ` <animate attributeName="startOffset" from="0%" to ="-500%" begin="0s" dur="50s" repeatCount="indefinite"/>`;
+}
+if (textPathDE) {
+  textPathDE.innerHTML =
+    repeatedTextDE +
+    ` <animate attributeName="startOffset" from="0%" to ="-500%" begin="0s" dur="50s" repeatCount="indefinite"/>`;
+}
