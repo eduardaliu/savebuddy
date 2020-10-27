@@ -752,12 +752,20 @@ body {
 
 .paypal {
   color: #4959df;
-  font-size: 0.80rem;
+  font-size: 0.8rem;
   margin: 10px 0 0 0; }
+
+svg {
+  width: 100vw;
+  height: 100px; }
+  @media (min-width: 868px) {
+    svg {
+      height: 170px; } }
 
 .textpath {
   fill: #fff5f3;
-  font-size: 3rem; }
+  margin: -30px;
+  font-size: 90px; }
   @media (min-width: 868px) {
     .textpath {
-      font-size: 1.9rem; } }
+      font-size: 36px; } }

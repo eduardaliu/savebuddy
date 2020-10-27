@@ -69,7 +69,7 @@ if (document.defaultView.innerWidth < 480) {
   taptocopy.innerHTML = "Or tap to copy our bank details:";
 }
 if (buttonPT && document.defaultView.innerWidth < 480) {
-  buttonPT.innerHTML = "Toque para Doar 🐶";
+  buttonPT.innerHTML = "Doe pelo Transferwise 🐶";
   taptocopyPT.innerHTML = "Toque para copiar nossos dados bancários:";
 }
 if (buttonDE && document.defaultView.innerWidth < 480) {

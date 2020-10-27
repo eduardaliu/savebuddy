@@ -338,8 +338,8 @@
     color: $purple;
     padding: 0 8px 0 0;
     a {
-        color: $purple;
-text-decoration: none;
+      color: $purple;
+      text-decoration: none;
     }
   }
   .data {
@@ -424,9 +424,9 @@ text-decoration: none;
       width: 10px;
     }
     a {
-        text-decoration: none;
-        color: $white;
-      }
+      text-decoration: none;
+      color: $white;
+    }
   }
 }
 
@@ -547,18 +547,24 @@ text-decoration: none;
 }
 
 .paypal {
-    color: $purple;
-    font-size: 0.80rem;
-    margin: 10px 0 0 0;
+  color: $purple;
+  font-size: 0.8rem;
+  margin: 10px 0 0 0;
 }
 
-
-.textpath {
-  fill: $lightpink;
-  font-size: 3rem;
+svg {
+  width: 100vw;
+  height: 100px;
   @media ($break-desktop) {
-    font-size: 1.9rem;
-
+    height: 170px;
   }
 }
 
+.textpath {
+  fill: $lightpink;
+  margin: -30px;
+  font-size: 90px;
+  @media ($break-desktop) {
+    font-size: 36px;
+  }
+}
