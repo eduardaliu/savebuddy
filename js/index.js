@@ -384,9 +384,58 @@ const textPath = document.querySelector("#pathselect");
 const textPathPT = document.querySelector("#pathselectpt");
 const textPathDE = document.querySelector("#pathselectde");
 
-const donations = "💸 Thank you ";
-const donationsPT = "💸 Obrigado ";
-const donationsDE = "💸 Danke ";
+const donors = [
+  "Orlando",
+  "Liu",
+  "Rafael",
+  "Joyce",
+  "Anita",
+  "Roni",
+  "Mei Ling",
+  "Annemie",
+  "Caro",
+  "Jeanette",
+  "Kers",
+  "Tadas",
+  "Greta",
+  "Carrie",
+  "Niels",
+  "Negin",
+  "Kristina",
+  "John",
+  "Karolina",
+  "Stefana",
+  "Jessy",
+  "Fabian",
+  "Camis",
+  "Farahnaz",
+  "Katarina",
+  "Joana",
+  "Joey",
+  "Sofi",
+  "Francesco",
+  "Leon",
+  "Carolas",
+  "Jannes",
+  "Mimi",
+  "Frankie",
+];
+
+const shuffled = (array) => {
+  for(let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * i)
+    const temp = array[i]
+    array[i] = array[j]
+    array[j] = temp
+  }
+};
+
+shuffled(donors)
+
+
+const donations = donors.join(" 💕 Thank you ");
+const donationsPT = donors.join(" 💕 Obrigada ");
+const donationsDE = donors.join(" 💕 Danke ");
 
 const repeatedText = new Array(50).fill(donations).join("");
 const repeatedTextPT = new Array(50).fill(donationsPT).join("");
@@ -395,15 +444,15 @@ const repeatedTextDE = new Array(50).fill(donationsDE).join("");
 if (textPath) {
   textPath.innerHTML =
     repeatedText +
-    ` <animate attributeName="startOffset" from="0%" to ="-500%" begin="0s" dur="50s" repeatCount="indefinite"/>`;
+    ` <animate attributeName="startOffset" from="10%" to ="-500%" begin="0s" dur="50s" repeatCount="indefinite"/>`;
 }
 if (textPathPT) {
   textPathPT.innerHTML =
     repeatedTextPT +
-    ` <animate attributeName="startOffset" from="0%" to ="-500%" begin="0s" dur="50s" repeatCount="indefinite"/>`;
+    ` <animate attributeName="startOffset" from="10%" to ="-500%" begin="0s" dur="50s" repeatCount="indefinite"/>`;
 }
 if (textPathDE) {
   textPathDE.innerHTML =
     repeatedTextDE +
-    ` <animate attributeName="startOffset" from="0%" to ="-500%" begin="0s" dur="50s" repeatCount="indefinite"/>`;
+    ` <animate attributeName="startOffset" from="10%" to ="-500%" begin="0s" dur="50s" repeatCount="indefinite"/>`;
 }
