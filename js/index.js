@@ -420,7 +420,13 @@ const donors = [
   "Mimi",
   "Frankie",
   "Constanze",
-  "Nadine"
+  "Nadine",
+  "Toby",
+  "Claudia",
+  "Tim",
+  "Jenny",
+  "Svea",
+  "Tobi"
 ];
 
 const shuffled = (array) => {
